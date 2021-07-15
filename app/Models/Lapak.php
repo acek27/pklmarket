@@ -23,4 +23,14 @@ class Lapak extends Model
             'foto_lapak' => 'required|image',
         ];
     }
+
+    public function getNamaTokoAttribute($value)
+    {
+        return ucwords($value);
+    }
+
+    public function getLokasiAttribute($value)
+    {
+        return ucfirst($value);
+    }
 }

@@ -21,7 +21,7 @@
             @foreach($data as $datum)
                 <tr>
                     <th>{{$datum->nama_kurir}}</th>
-                    <td>+62{{$datum->kontak}}</td>
+                    <td>{{$datum->kontak}}</td>
                     <td>{{$datum->logo}}</td>
                     <td>
                         <a class="btn btn-primary" href="{{route('kurir.show',$datum->id)}}">lihat</a>

@@ -36,6 +36,10 @@ class Seller extends Model
         $this->attributes['telp'] = ltrim($value, 0);
 
     }
+    public function getNamaPedagangAttribute($value)
+    {
+        return ucwords($value);
+    }
 
     public function lapaks()
     {

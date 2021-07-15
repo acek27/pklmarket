@@ -17,12 +17,12 @@ class KurirSeeder extends Seeder
         $data = [
             [
                 'nama_kurir' => 'JOKER',
-                'kontak' => '6281284622150',
+                'kontak' => '81284622150',
                 'logo' => null
             ],
             [
                 'nama_kurir' => 'JOKI SITUBONDO',
-                'kontak' => '6289513528627',
+                'kontak' => '89513528627',
                 'logo' => null
             ],
             [
@@ -37,7 +37,7 @@ class KurirSeeder extends Seeder
             ],
             [
                 'nama_kurir' => 'O-TRANS',
-                'kontak' => '6285204955000',
+                'kontak' => '85204955000',
                 'logo' => null
             ],
             [

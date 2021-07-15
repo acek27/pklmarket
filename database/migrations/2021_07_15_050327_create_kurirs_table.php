@@ -16,7 +16,8 @@ class CreateKurirsTable extends Migration
         Schema::create('kurirs', function (Blueprint $table) {
             $table->id();
             $table->string('nama_kurir');
-            $table->string('kontak');
+            $table->string('kontak')->nullable();
+            $table->string('logo')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

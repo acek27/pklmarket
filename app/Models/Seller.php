@@ -9,7 +9,7 @@ class Seller extends Model
 {
     protected $guarded = [];
     public static $rulesCreate = [
-        'nama_pedagang' => 'required|numeric',
+        'nama_pedagang' => 'required',
         'alamat' => 'required',
         'telp' => 'required|numeric',
         'whatsapp' => 'required|numeric',
@@ -23,5 +23,10 @@ class Seller extends Model
             'telp' => 'required|numeric',
             'whatsapp' => 'required|numeric',
         ];
+    }
+
+    public function lapaks()
+    {
+        return $this->hasMany(Lapak::class);
     }
 }

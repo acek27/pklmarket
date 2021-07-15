@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\SellerController;
+use App\Http\Controllers\Admin\LapakController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,5 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('/seller', SellerController::class);
+Route::get('lapak/gambar/{id}', [LapakController::class, 'file'])->name('lapak.file');
+Route::resource('/lapak', LapakController::class);

@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Seller;
+use App\Models\Lapak;
 use Illuminate\Http\Request;
 
-class SellerController extends Controller
+class LapakController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,7 @@ class SellerController extends Controller
      */
     public function index()
     {
-        $data = Seller::all();
-        return view('seller.index', compact('data'));
+        //
     }
 
     /**
@@ -26,7 +25,7 @@ class SellerController extends Controller
      */
     public function create()
     {
-        return view('seller.create');
+
     }
 
     /**
@@ -37,9 +36,26 @@ class SellerController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, Seller::$rulesCreate);
-        $data = Seller::create($request->all());
-        return redirect()->route('seller.show', $data->id)->with(['message' => 'Berhasil menyimpan']);
+        $this->validate($request, Lapak::$rulesCreate);
+        $fill = $request->all();
+        $filename = uniqid() . '-' . uniqid() . '.' . $request->foto_lapak->
+            getClientOriginalExtension();
+        $path = $request->foto_lapak->storeAs('foto_lapak', $filename);
+        $fill['foto_lapak'] = $path;
+        Lapak::create($fill);;
+        return redirect()->back()->with(['message' => 'Berhasil menyimpan']);
+    }
+
+    public function file($id)
+    {
+        $poster = Lapak::find($id);
+        $file = storage_path('app/' . $poster->foto_lapak);
+        return response()
+            ->file($file, [
+                'Cache-Control' => 'no-cache, no-store, must-revalidate',
+                'Pragma' => 'no-cache',
+                'Expires' => '0'
+            ]);
     }
 
     /**
@@ -50,8 +66,7 @@ class SellerController extends Controller
      */
     public function show($id)
     {
-        $data = Seller::with('lapaks')->find($id);
-        return view('seller.show', compact('data'));
+        //
     }
 
     /**

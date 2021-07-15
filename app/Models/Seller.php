@@ -25,6 +25,18 @@ class Seller extends Model
         ];
     }
 
+    public function setWhatsappAttribute($value)
+    {
+        $this->attributes['whatsapp'] = ltrim($value, 0);
+
+    }
+
+    public function setTelpAttribute($value)
+    {
+        $this->attributes['telp'] = ltrim($value, 0);
+
+    }
+
     public function lapaks()
     {
         return $this->hasMany(Lapak::class);

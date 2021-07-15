@@ -23,9 +23,12 @@
                 <tr>
                     <th>{{$datum->nama_pedagang}}</th>
                     <td>{{$datum->alamat}}</td>
-                    <td>{{$datum->telp}}</td>
-                    <td>{{$datum->whatsapp}}</td>
-                    <td><a href="{{route('seller.show',$datum->id)}}">lihat</a></td>
+                    <td>+62{{$datum->telp}}</td>
+                    <td>+62{{$datum->whatsapp}}</td>
+                    <td>
+                        <a class="btn btn-primary" href="{{route('seller.show',$datum->id)}}">lihat</a>
+                        <a class="btn btn-info" href="{{route('seller.edit',$datum->id)}}">edit</a>
+                    </td>
                 </tr>
             @endforeach
             </tbody>

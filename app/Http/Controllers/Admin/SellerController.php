@@ -50,7 +50,7 @@ class SellerController extends Controller
      */
     public function show($id)
     {
-        $data = Seller::with('lapaks')->find($id);
+        $data = Seller::with('lapaks')->findOrFail($id);
         return view('seller.show', compact('data'));
     }
 
@@ -62,7 +62,8 @@ class SellerController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = Seller::find($id);
+        return view('seller.edit', compact('data'));
     }
 
     /**
@@ -74,7 +75,10 @@ class SellerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = Seller::findOrFail($id);
+        $this->validate($request, Seller::rulesEdit($data));
+        $data->update($request->all());
+        return redirect()->route('seller.index', $data->id)->with(['message' => 'Berhasil menyimpan']);
     }
 
     /**

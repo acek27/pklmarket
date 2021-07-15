@@ -17,8 +17,11 @@
     </div>
 </div>
 <div class="form-group">
-    <div class="form-group">
-        {{Form::label('telp', 'No. HP', ['class' => 'awesome'])}}
+    {{Form::label('telp', 'No. HP', ['class' => 'awesome'])}}
+    <div class="input-group">
+        <div class="input-group-append" data-target="#timepicker" data-toggle="datetimepicker">
+            <div class="input-group-text">+62</div>
+        </div>
         {{ Form::number('telp',null,[
             'class'=>'form-control',
             'id' => 'telp',
@@ -27,12 +30,16 @@
     </div>
 </div>
 <div class="form-group">
-    <div class="form-group">
-        {{Form::label('whatsapp', 'No. Whatsapp', ['class' => 'awesome'])}}
+    {{Form::label('whatsapp', 'No. Whatsapp', ['class' => 'awesome'])}}
+    <div class="input-group">
+        <div class="input-group-append" data-target="#timepicker" data-toggle="datetimepicker">
+            <div class="input-group-text">+62</div>
+        </div>
         {{ Form::number('whatsapp',null,[
             'class'=>'form-control',
             'id' => 'whatsapp',
             'required' => 'required'
         ]) }}
+
     </div>
 </div>

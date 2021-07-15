@@ -38,6 +38,8 @@
                                             <div class="col-7">
                                                 <h6>Lokasi :</h6>
                                                 <p class="lead">{{$lapak->lokasi}}</p>
+                                                <h6>Whatsapp :</h6>
+                                                <a target="_blank" href="{{url('https://api.whatsapp.com/send?phone='.$data->whatsapp)}}">+62{{$data->whatsapp}}</a>
                                             </div>
                                             <div class="col-5 text-center">
                                                 <img src="{{route('lapak.file',$lapak->id)}}" alt=""
@@ -54,7 +56,6 @@
                                            class="btn btn-sm btn-primary">
                                             <i class="fas fa-user"></i> Kunjungi
                                         </a>
-
                                     </div>
                                 </div>
                             </div>

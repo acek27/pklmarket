@@ -31,7 +31,7 @@
                             <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
                                 <div class="card bg-light">
                                     <div class="card-header text-muted border-bottom-0">
-                                        {{$lapak->nama_toko}}
+                                        {{$lapak->nama_toko}} <a href="{{route('lapak.edit',$lapak->id)}}" class="text-info" style="float: right">edit</a>
                                     </div>
                                     <div class="card-body pt-0">
                                         <div class="row">
@@ -39,7 +39,8 @@
                                                 <h6>Lokasi :</h6>
                                                 <p class="lead">{{$lapak->lokasi}}</p>
                                                 <h6>Whatsapp :</h6>
-                                                <a target="_blank" href="{{url('https://api.whatsapp.com/send?phone='.$data->whatsapp)}}">+62{{$data->whatsapp}}</a>
+                                                <a target="_blank"
+                                                   href="{{url('https://api.whatsapp.com/send?phone=+62'.$data->whatsapp)}}">+62{{$data->whatsapp}}</a>
                                             </div>
                                             <div class="col-5 text-center">
                                                 <img src="{{route('lapak.file',$lapak->id)}}" alt=""

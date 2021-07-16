@@ -12,15 +12,15 @@ class Lapak extends Model
     public static $rulesCreate = [
         'nama_toko' => 'required',
         'lokasi' => 'required',
-        'foto_lapak' => 'required|image',
+        'foto_lapak' => 'nullable|image',
     ];
 
-    public static function rulesEdit(Seller $data)
+    public static function rulesEdit(Lapak $data)
     {
         return [
             'nama_toko' => 'required',
             'lokasi' => 'required',
-            'foto_lapak' => 'required|image',
+            'foto_lapak' => 'nullable|image',
         ];
     }
 

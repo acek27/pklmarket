@@ -8,11 +8,17 @@ use Illuminate\Http\Request;
 
 class LapakController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('can:admin');
+    }
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         //
@@ -77,7 +83,8 @@ class LapakController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = Lapak::findOrFail($id);
+        return view('lapak.edit', compact('data'));
     }
 
     /**
@@ -89,7 +96,19 @@ class LapakController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = Lapak::findOrFail($id);
+        $this->validate($request, Lapak::rulesEdit($data));
+        $fill = $request->all();
+        if ($request->foto_lapak == '') {
+            unset($fill['foto_lapak']);
+        } else {
+            $filename = uniqid() . '-' . uniqid() . '.' . $request->foto_lapak->
+                getClientOriginalExtension();
+            $path = $request->foto_lapak->storeAs('foto_lapak', $filename);
+            $fill['foto_lapak'] = $path;
+        }
+        $data->update($fill);;
+        return redirect()->route('seller.show',$data->seller_id)->with(['message' => 'Berhasil menyimpan']);
     }
 
     /**

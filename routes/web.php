@@ -22,9 +22,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::resource('/seller', SellerController::class);
-Route::get('lapak/gambar/{id}', [LapakController::class, 'file'])->name('lapak.file');
-Route::resource('/lapak', LapakController::class);
-Route::resource('/kurir', KurirController::class);
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::resource('/seller', SellerController::class);
+    Route::get('lapak/gambar/{id}', [LapakController::class, 'file'])->name('lapak.file');
+    Route::resource('/lapak', LapakController::class);
+    Route::resource('/kurir', KurirController::class);
+});

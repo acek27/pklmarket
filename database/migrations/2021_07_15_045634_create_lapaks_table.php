@@ -16,8 +16,9 @@ class CreateLapaksTable extends Migration
         Schema::create('lapaks', function (Blueprint $table) {
             $table->id();
             $table->string('nama_toko');
+            $table->string('deskripsi')->nullable();
             $table->string('lokasi');
-            $table->string('foto_lapak');
+            $table->string('foto_lapak')->nullable();
             $table->bigInteger('seller_id')->unsigned();
             $table->foreign('seller_id')->references('id')
                 ->on('sellers')->onUpdate('cascade')->onDelete('cascade');

@@ -44,10 +44,14 @@ class LapakController extends Controller
     {
         $this->validate($request, Lapak::$rulesCreate);
         $fill = $request->all();
-        $filename = uniqid() . '-' . uniqid() . '.' . $request->foto_lapak->
-            getClientOriginalExtension();
-        $path = $request->foto_lapak->storeAs('foto_lapak', $filename);
-        $fill['foto_lapak'] = $path;
+        if ($request->foto_lapak == '') {
+            unset($fill['foto_lapak']);
+        } else {
+            $filename = uniqid() . '-' . uniqid() . '.' . $request->foto_lapak->
+                getClientOriginalExtension();
+            $path = $request->foto_lapak->storeAs('foto_lapak', $filename);
+            $fill['foto_lapak'] = $path;
+        }
         Lapak::create($fill);;
         return redirect()->back()->with(['message' => 'Berhasil menyimpan']);
     }
@@ -108,7 +112,7 @@ class LapakController extends Controller
             $fill['foto_lapak'] = $path;
         }
         $data->update($fill);;
-        return redirect()->route('seller.show',$data->seller_id)->with(['message' => 'Berhasil menyimpan']);
+        return redirect()->route('seller.show', $data->seller_id)->with(['message' => 'Berhasil menyimpan']);
     }
 
     /**

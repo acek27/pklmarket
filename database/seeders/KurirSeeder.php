@@ -32,7 +32,7 @@ class KurirSeeder extends Seeder
             ],
             [
                 'nama_kurir' => 'NU-JEK',
-                'kontak' => null,
+                'kontak' => '85258822357',
                 'logo' => null
             ],
             [
@@ -43,6 +43,11 @@ class KurirSeeder extends Seeder
             [
                 'nama_kurir' => 'GRAB',
                 'kontak' => null,
+                'logo' => null
+            ],
+            [
+                'nama_kurir' => 'BangJo',
+                'kontak' => '8113618687',
                 'logo' => null
             ],
         ];

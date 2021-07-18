@@ -31,7 +31,8 @@
                             <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
                                 <div class="card bg-light">
                                     <div class="card-header text-muted border-bottom-0">
-                                        {{$lapak->nama_toko}} <a href="{{route('lapak.edit',$lapak->id)}}" class="text-info" style="float: right">edit</a>
+                                        {{$lapak->nama_toko}} <a href="{{route('lapak.edit',$lapak->id)}}"
+                                                                 class="text-info" style="float: right">edit</a>
                                     </div>
                                     <div class="card-body pt-0">
                                         <div class="row">
@@ -53,7 +54,7 @@
                                            class="btn btn-sm btn-danger">
                                             <i class="fas fa-user"></i> Nonaktifkan
                                         </a>
-                                        <a href="#" style="float: right"
+                                        <a href="{{route('produk.show', $lapak->id)}}" style="float: right"
                                            class="btn btn-sm btn-primary">
                                             <i class="fas fa-user"></i> Kunjungi
                                         </a>
@@ -87,6 +88,15 @@
                         ]) }}
                     </div>
                     <div class="form-group">
+                        {{Form::label('deskripsi', 'Deskripsi', ['class' => 'awesome'])}}
+                        {{ Form::textarea('deskripsi', null, [
+                            'class'      => 'form-control',
+                            'rows'       => 3,
+                            'name'       => 'deskripsi',
+                            'id'         => 'deskripsi',
+                        ]) }}
+                    </div>
+                    <div class="form-group">
                         {{Form::label('lokasi', 'Lokasi', ['class' => 'awesome'])}}
                         {{ Form::text('lokasi',null,[
                             'class'=>'form-control',
@@ -99,7 +109,6 @@
                         {{ Form::file('foto_lapak',null,[
                             'class'=>'form-control-file',
                             'id' => 'foto_lapak',
-                            'required' => 'required'
                         ]) }}
                     </div>
                     <input type="hidden" name="seller_id" value="{{$data->id}}">

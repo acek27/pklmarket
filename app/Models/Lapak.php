@@ -11,6 +11,7 @@ class Lapak extends Model
 
     public static $rulesCreate = [
         'nama_toko' => 'required',
+        'deskripsi' => 'nullable',
         'lokasi' => 'required',
         'foto_lapak' => 'nullable|image',
     ];
@@ -19,6 +20,7 @@ class Lapak extends Model
     {
         return [
             'nama_toko' => 'required',
+            'deskripsi' => 'nullable',
             'lokasi' => 'required',
             'foto_lapak' => 'nullable|image',
         ];

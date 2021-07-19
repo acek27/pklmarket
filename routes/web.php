@@ -18,25 +18,16 @@ use App\Http\Controllers\Admin\ProdukController;
 |
 */
 
-Route::get('/view-all', function () {
-    return view('view-all');
-});
-Route::get('/produk', function () {
-    return view('view-produk');
-});
-Route::get('/outlet', function () {
-    return view('outlet');
-});
-
 Route::resource('/', DashboardController::class);
 Auth::routes();
 
+Route::get('lapak/gambar/{id}', [LapakController::class, 'file'])->name('lapak.file');
+Route::get('produk/show/{id}', [ProdukController::class, 'viewall'])->name('view.all');
+Route::get('produk/gambar/{id}', [ProdukController::class, 'file'])->name('produk.file');
+Route::resource('/produk', ProdukController::class);
+Route::resource('/lapak', LapakController::class);
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::resource('/seller', SellerController::class);
-    Route::get('lapak/gambar/{id}', [LapakController::class, 'file'])->name('lapak.file');
-    Route::resource('/lapak', LapakController::class);
     Route::resource('/kurir', KurirController::class);
-    Route::get('produk/gambar/{id}', [ProdukController::class, 'file'])->name('produk.file');
-    Route::resource('/produk', ProdukController::class);
 });

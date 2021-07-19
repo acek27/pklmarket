@@ -8,11 +8,11 @@ use App\Models\Lapak;
 use App\Models\Produk;
 use Illuminate\Http\Request;
 
-class LapakController extends Controller
+class ProdukController extends Controller
 {
     public function __construct()
     {
-    $this->middleware('can:admin')->except(['file','show']);
+        $this->middleware('can:admin')->except(['file', 'show','viewall']);
     }
 
     /**
@@ -20,10 +20,16 @@ class LapakController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
     public function index()
     {
         //
+    }
+
+    public function viewall($id)
+    {
+        $key = $id;
+        $data = Produk::where('kategori_id', $id)->get();
+        return view('view-all', compact('data', 'key'));
     }
 
     /**
@@ -33,7 +39,7 @@ class LapakController extends Controller
      */
     public function create()
     {
-
+        //
     }
 
     /**
@@ -44,24 +50,24 @@ class LapakController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, Lapak::$rulesCreate);
+        $this->validate($request, Produk::$rulesCreate);
         $fill = $request->all();
-        if ($request->foto_lapak == '') {
-            unset($fill['foto_lapak']);
+        if ($request->foto_produk == '') {
+            unset($fill['foto_produk']);
         } else {
-            $filename = uniqid() . '-' . uniqid() . '.' . $request->foto_lapak->
+            $filename = uniqid() . '-' . uniqid() . '.' . $request->foto_produk->
                 getClientOriginalExtension();
-            $path = $request->foto_lapak->storeAs('foto_lapak', $filename);
-            $fill['foto_lapak'] = $path;
+            $path = $request->foto_produk->storeAs('foto_produk', $filename);
+            $fill['foto_produk'] = $path;
         }
-        Lapak::create($fill);;
+        Produk::create($fill);;
         return redirect()->back()->with(['message' => 'Berhasil menyimpan']);
     }
 
     public function file($id)
     {
-        $poster = Lapak::find($id);
-        $file = storage_path('app/' . $poster->foto_lapak);
+        $poster = Produk::find($id);
+        $file = storage_path('app/' . $poster->foto_produk);
         return response()
             ->file($file, [
                 'Cache-Control' => 'no-cache, no-store, must-revalidate',
@@ -78,10 +84,8 @@ class LapakController extends Controller
      */
     public function show($id)
     {
-        $data = Lapak::findOrFail($id);
-        $produk = Produk::where('lapak_id', $data->id)->get();
-        $kategori = Kategori::all()->pluck('nama_kategori', 'id');
-        return view('lapak.show', compact('data', 'kategori', 'produk'));
+        $data = Produk::with('lapaks')->findOrFail($id);
+        return view('produk.show', compact('data'));
     }
 
     /**
@@ -92,8 +96,7 @@ class LapakController extends Controller
      */
     public function edit($id)
     {
-        $data = Lapak::findOrFail($id);
-        return view('lapak.edit', compact('data'));
+        //
     }
 
     /**
@@ -105,19 +108,7 @@ class LapakController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = Lapak::findOrFail($id);
-        $this->validate($request, Lapak::rulesEdit($data));
-        $fill = $request->all();
-        if ($request->foto_lapak == '') {
-            unset($fill['foto_lapak']);
-        } else {
-            $filename = uniqid() . '-' . uniqid() . '.' . $request->foto_lapak->
-                getClientOriginalExtension();
-            $path = $request->foto_lapak->storeAs('foto_lapak', $filename);
-            $fill['foto_lapak'] = $path;
-        }
-        $data->update($fill);;
-        return redirect()->route('seller.show', $data->seller_id)->with(['message' => 'Berhasil menyimpan']);
+        //
     }
 
     /**

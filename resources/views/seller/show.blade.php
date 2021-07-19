@@ -54,7 +54,7 @@
                                            class="btn btn-sm btn-danger">
                                             <i class="fas fa-user"></i> Nonaktifkan
                                         </a>
-                                        <a href="{{route('produk.show', $lapak->id)}}" style="float: right"
+                                        <a href="{{route('lapak.show', $lapak->id)}}" style="float: right"
                                            class="btn btn-sm btn-primary">
                                             <i class="fas fa-user"></i> Kunjungi
                                         </a>

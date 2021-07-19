@@ -1,177 +1,83 @@
 @extends('layouts.layout-master')
 @section('title')
-    Manakan
+    Detail Produk
 @endsection
 
-@push('css')
+@section('css')
 
-@endpush
+@endsection
 
 @section('content')
-    <div class="row">
-        <div class="col-md-12">
-            @if(session()->has('message'))
-                <div class="alert alert-success">
-                    {{ session()->get('message') }}
-                </div>
-            @endif
-            @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
+<!--begin::Row-->
+<div class="row">
+
+        <div class="col-md-12 col-lg-12 col-xxl-12">
+            <!--begin::Engage Widget 14-->
             <div class="card card-custom card-stretch gutter-b">
-                <div class="card-body">
-                    <div class="mb-11">
-                        <div class="card card-custom mb-12">
-                            <div class="card-body rounded p-0 d-flex" style="background-color:#DAF0FD;">
-                                <div
-                                    class="d-flex flex-column flex-lg-row-auto w-auto w-lg-350px w-xl-450px w-xxl-500px p-10 p-md-20">
-                                    <h1 class="font-weight-bolder text-dark">{{$data->nama_toko}}</h1>
-                                    <div class="font-size-h4 mb-8">{{$data->lokasi}}</div>
-                                    <button type="button" style="float: right" class="btn btn-primary"
-                                            data-toggle="modal"
-                                            data-target="#modal-produk">
-                                        <i class="fa fa-plus"></i> Tambah Produk
-                                    </button>
+                <div class="card-body p-15 pb-20">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6 col-xxl-6">
+                            <div class="col-xxl-5 mb-11 mb-xxl-0">
+                                <!--begin::Image-->
+                                <div class="card card-custom card-stretch">
+                                    <div class="card-body p-0 rounded px-10 py-15 d-flex align-items-center justify-content-center" style="background-color: #FFCC69;">
+                                        @if(is_null($data->foto_produk))
+                                            <img src="{{asset('assets/media/products/16.png')}}" alt=""
+                                                 class="mw-100 w-200px">
+                                        @else
+                                            <img src="{{route('produk.file', $data->id)}}" class="mw-100 w-200px" style="transform: scale(1.6);">
+                                        @endif
+                                    </div>
                                 </div>
-                                <div
-                                    class="d-none d-md-flex flex-row-fluid bgi-no-repeat bgi-position-y-center bgi-position-x-left bgi-size-cover"
-                                    style="background-image: {{route('lapak.file',$data->id)}}">
+                                <!--end::Image-->
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-xxl-6">
+                            <div class="col-xxl-7 pl-xxl-11">
+                                <h2 class="font-weight-bolder text-dark mb-7" style="font-size: 20px;">{{$data->nama_produk}}</h2>
+                                <div class="font-size-h2 mb-7 text-dark-50">Harga
+                                <span class="text-info font-weight-boldest ml-2">  Rp {{number_format($data->harga, 0, ',', '.')}}</span></div>
+
+                                <div class="d-flex align-items-center">
+                                    <div class="symbol symbol-50 symbol-light-white">
+                                        <div class="symbol-label">
+                                            <img src="{{route('lapak.file', $data->lapaks->id)}}" class="h-75" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column font-weight-bold">
+                                        <a href="{{route('lapak.show', $data->lapaks->id)}}" class="text-dark text-hover-primary mb-1 font-size-lg">{{$data->lapaks->nama_toko}}</a>
+                                        <span class="text-muted">{{$data->lapaks->lokasi}}</span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <h5>Deskripsi</h5>
+                                <div class="line-height-xl">{{$data->deskripsi}}</div>
+                            </div>
+                            <hr>
+                            <div class="form-group row">
+                                <div class="col-3">
+                                    <input class="form-control" type="number" value="1" min="1" d="example-number-input">
+                                </div>
+                                <div class="col-9">
+                                    <button type="reset" class="btn btn-primary mr-2">Tambah Keranjang</button>
+									<button type="reset" class="btn btn-success">checkout</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card card-custom card-stretch gutter-b">
-                <div class="card-body">
-                    <div class="mb-11">
-                        <div class="d-flex justify-content-between align-items-center mb-7">
-                            <h2 class="font-weight-bolder text-dark font-size-h3 mb-0">Makanan</h2>
-                        </div>
-                        <div class="row">
-                            @foreach($produk as $value)
-                                <div class="col-md-4 col-lg-3 col-xxl-4">
-                                    <div class="card card-custom card-shadowless">
-                                        <div class="card-body p-0">
-                                            <div class="overlay">
-                                                <div class="overlay-wrapper rounded bg-light text-center">
-                                                    @if(is_null($value->foto_produk))
-                                                        <img src="{{asset('assets/media/products/16.png')}}" alt=""
-                                                             class="mw-100 w-200px">
-                                                    @else
-                                                        <img src="{{route('produk.file',$value->id)}}" alt=""
-                                                             class="mw-100 w-200px">
-                                                    @endif
-                                                </div>
-                                                <div class="overlay-layer">
-                                                    <a href="#" class="btn font-weight-bolder btn-sm btn-primary mr-2">Quick
-                                                        View</a>
-                                                    <a href="#" class="btn font-weight-bolder btn-sm btn-light-primary">Purchase</a>
-                                                </div>
-                                            </div>
-                                            <div
-                                                class="text-center mt-5 mb-md-0 mb-lg-5 mb-md-0 mb-lg-5 mb-lg-0 mb-5 d-flex flex-column">
-                                                <p>{{$value->harga}}</p>
-                                                <a href="{{url('produk')}}"
-                                                   class="font-size-h5 font-weight-bolder text-dark-75 text-hover-primary mb-1">{{$value->nama_produk}}</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
 
-                    <a href="#" class="btn btn-light-primary btn-sm font-weight-bolder">Load More</a>
+
 
                 </div>
             </div>
+            <!--end::Engage Widget 14-->
         </div>
-    </div>
-    <div class="modal fade" id="modal-produk">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Produk Baru</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    {!! Form::open(['url'=>route('produk.store'), 'files' => true]) !!}
-                    <div class="form-group">
-                        {{Form::label('nama_produk', 'Nama Produk', ['class' => 'awesome'])}}
-                        {{ Form::text('nama_produk',null,[
-                            'class'=>'form-control',
-                            'id' => 'nama_produk',
-                            'required' => 'required'
-                        ]) }}
-                    </div>
-                    <div class="form-group">
-                        {{Form::label('deskripsi', 'Deskripsi', ['class' => 'awesome'])}}
-                        {{ Form::textarea('deskripsi', null, [
-                             'class'      => 'form-control',
-                             'rows'       => 3,
-                             'name'       => 'deskripsi',
-                             'id'         => 'deskripsi',
-                         ]) }}
-                    </div>
-                    <div class="form-group">
-                        {{Form::label('harga', 'Harga', ['class' => 'awesome'])}}
-                        {{ Form::number('harga',null,[
-                            'class'=>'form-control',
-                            'id' => 'harga',
-                            'required' => 'required'
-                        ]) }}
-                    </div>
-                    <div class="form-group">
-                        {{Form::label('kategori_id', 'Kategori', ['class' => 'awesome'])}}
-                        {{ Form::select('kategori_id', $kategori,null,[
-                              'class'=>'form-control select2',
-                              'id' => 'kategori_id',
-                              'placeholder' => '-- Pilih kategori --',
-                              'required' => 'required'
-                          ]) }}
-                    </div>
-                    <div class="form-group">
-                        {{Form::label('foto_produk', 'Gambar Produk', ['class' => 'awesome'])}}
-                        {{ Form::file('foto_produk',null,[
-                            'class'=>'form-control',
-                            'id' => 'foto_produk',
-                        ]) }}
-                    </div>
-                    <input type="hidden" name="lapak_id" value="{{$data->id}}">
-                </div>
-                <div class="modal-footer justify-content-between">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    {!! Form::submit('Simpan', [
-                            'class'=>'btn btn-info',
-                            'id' => 'save'
-                        ]) !!}
-                </div>
-                {!! Form::close() !!}
-            </div>
-            <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-    </div>
+
+</div>
+<!--end::Row-->
+
 @endsection
 
-@push('js')
-    <script src="{{url('https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js')}}"></script>
-    <script !src="">
-        $(document).ready(function () {
-            $('.select2').select2();
-        });
-    </script>
-@endpush
+@section('js')
+
+@endsection

@@ -28,7 +28,7 @@ class ProdukController extends Controller
     public function viewall($id)
     {
         $key = $id;
-        $data = Produk::where('kategori_id', $id)->get();
+        $data = Produk::with('lapaks')->where('kategori_id', $id)->get();
         return view('view-all', compact('data', 'key'));
     }
 

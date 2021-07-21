@@ -192,7 +192,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <div class="row gutter-b">
             <!--begin::Item-->
             <div class="col-6">
-                <a href="#" class="btn btn-block btn-light btn-hover-primary text-dark-50 text-center py-10 px-5">
+                <a href="{{route('view.all', 1)}}" class="btn btn-block btn-light btn-hover-primary text-dark-50 text-center py-10 px-5">
 							<span class="svg-icon svg-icon-3x svg-icon-primary m-0">
 								<!--begin::Svg Icon | path:assets/media/svg/icons/Shopping/Euro.svg-->
 								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -215,7 +215,7 @@ License: You must have a valid license purchased only from themeforest(the above
             <!--end::Item-->
             <!--begin::Item-->
             <div class="col-6">
-                <a href="#" class="btn btn-block btn-light btn-hover-primary text-dark-50 text-center py-10 px-5">
+                <a href="{{route('view.all', 2)}}" class="btn btn-block btn-light btn-hover-primary text-dark-50 text-center py-10 px-5">
 							<span class="svg-icon svg-icon-3x svg-icon-primary m-0">
 								<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Mail-attachment.svg-->
 								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"

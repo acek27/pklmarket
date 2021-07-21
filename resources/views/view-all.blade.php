@@ -33,7 +33,7 @@
                                                 @endif
                                             </div>
                                             <div class="overlay-layer">
-                                                <a href="#" class="btn font-weight-bolder btn-sm btn-primary mr-2">Quick
+                                                <a href="{{route('produk.show', $datum->id)}}" class="btn font-weight-bolder btn-sm btn-primary mr-2">Quick
                                                     View</a>
                                                 <a href="#" class="btn font-weight-bolder btn-sm btn-light-primary">Purchase</a>
                                             </div>
@@ -41,8 +41,7 @@
                                         <div
                                             class="text-center mt-5 mb-md-0 mb-lg-5 mb-md-0 mb-lg-5 mb-lg-0 mb-5 d-flex flex-column">
                                             <a href="{{url('produk')}}"
-                                               class="font-size-h5 font-weight-bolder text-dark-75 text-hover-primary mb-1">NAMA
-                                                MAKANAN</a>
+                                               class="font-size-h5 font-weight-bolder text-dark-75 text-hover-primary mb-1">{{$datum->nama_produk}}</a>
                                         </div>
                                         <div class="d-flex align-items-center">
                                             <div class="symbol symbol-50 symbol-light-white">
@@ -51,9 +50,9 @@
                                                 </div>
                                             </div>
                                             <div class="d-flex flex-column font-weight-bold">
-                                                <a href="{{url('outlet')}}"
-                                                   class="text-dark text-hover-primary mb-1 font-size-lg">Nama Toko</a>
-                                                <span class="text-muted">Alamat Toko</span>
+                                                <a href="{{route('lapak.show', $datum->lapak_id)}}"
+                                                   class="text-dark text-hover-primary mb-1 font-size-lg">{{$datum->lapaks->nama_toko}}</a>
+                                                <span class="text-muted">{{$datum->lapaks->lokasi}}</span>
                                             </div>
                                         </div>
                                         <hr>

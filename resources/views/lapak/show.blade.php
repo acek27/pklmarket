@@ -76,7 +76,7 @@
                                                     @endif
                                                 </div>
                                                 <div class="overlay-layer">
-                                                    <a href="#" class="btn font-weight-bolder btn-sm btn-primary mr-2">Quick
+                                                    <a href="{{route('produk.show', $value->id)}}" class="btn font-weight-bolder btn-sm btn-primary mr-2">Quick
                                                         View</a>
                                                     <a href="#" class="btn font-weight-bolder btn-sm btn-light-primary">Purchase</a>
                                                 </div>

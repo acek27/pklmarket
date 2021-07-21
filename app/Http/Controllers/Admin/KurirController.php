@@ -32,7 +32,7 @@ class KurirController extends Controller
      */
     public function create()
     {
-        //
+        return view('kurir.create');
     }
 
     /**
@@ -43,7 +43,30 @@ class KurirController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, Kurir::$rulesCreate);
+        $fill = $request->all();
+        if ($request->logo == '') {
+            unset($fill['logo']);
+        } else {
+            $filename = uniqid() . '-' . uniqid() . '.' . $request->logo->
+                getClientOriginalExtension();
+            $path = $request->logo->storeAs('logo', $filename);
+            $fill['logo'] = $path;
+        }
+        Kurir::create($fill);;
+        return redirect()->route('kurir.index')->with(['message' => 'Berhasil menyimpan']);
+    }
+
+    public function file($id)
+    {
+        $poster = Kurir::find($id);
+        $file = storage_path('app/' . $poster->logo);
+        return response()
+            ->file($file, [
+                'Cache-Control' => 'no-cache, no-store, must-revalidate',
+                'Pragma' => 'no-cache',
+                'Expires' => '0'
+            ]);
     }
 
     /**
@@ -65,7 +88,8 @@ class KurirController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = Kurir::find($id);
+        return view('kurir.edit', compact('data'));
     }
 
     /**
@@ -77,7 +101,19 @@ class KurirController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = Kurir::findOrFail($id);
+        $this->validate($request, Kurir::rulesEdit($data));
+        $fill = $request->all();
+        if ($request->logo == '') {
+            unset($fill['logo']);
+        } else {
+            $filename = uniqid() . '-' . uniqid() . '.' . $request->logo->
+                getClientOriginalExtension();
+            $path = $request->logo->storeAs('logo', $filename);
+            $fill['logo'] = $path;
+        }
+        $data->update($fill);;
+        return redirect()->route('kurir.index')->with(['message' => 'Berhasil menyimpan']);
     }
 
     /**

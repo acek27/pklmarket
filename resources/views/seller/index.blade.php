@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.layout-master')
 @section('content')
     @if(session()->has('message'))
         <div class="alert alert-success">

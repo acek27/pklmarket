@@ -55,8 +55,8 @@
                                             <i class="fas fa-user"></i> Nonaktifkan
                                         </a>
                                         <a href="{{route('lapak.show', $lapak->id)}}" style="float: right"
-                                           class="btn btn-sm btn-primary">
-                                            <i class="fas fa-user"></i> Kunjungi
+                                           class="btn btn-sm btn-bg-success">
+                                            <i class="fas fa-arrow-right"></i> Kunjungi
                                         </a>
                                     </div>
                                 </div>

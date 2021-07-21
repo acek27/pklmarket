@@ -19,7 +19,7 @@ class Kurir extends Model
     {
         return [
             'nama_kurir' => 'required',
-            'nullable' => 'required',
+            'kontak' => 'nullable',
             'logo' => 'nullable|image',
         ];
     }

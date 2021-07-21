@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Kategori;
+use App\Models\Kurir;
 use App\Models\Lapak;
 use App\Models\Produk;
 use Illuminate\Http\Request;
@@ -12,7 +13,7 @@ class ProdukController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('can:admin')->except(['file', 'show','viewall']);
+        $this->middleware('can:admin')->except(['file', 'show', 'viewall']);
     }
 
     /**
@@ -84,8 +85,9 @@ class ProdukController extends Controller
      */
     public function show($id)
     {
+        $kurir = Kurir::all();
         $data = Produk::with('lapaks')->findOrFail($id);
-        return view('produk.show', compact('data'));
+        return view('produk.show', compact('data', 'kurir'));
     }
 
     /**

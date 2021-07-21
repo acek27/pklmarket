@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Lapak extends Model
 {
     protected $guarded = [];
+    protected $with = ['sellers'];
 
     public static $rulesCreate = [
         'nama_toko' => 'required',
@@ -34,5 +35,10 @@ class Lapak extends Model
     public function getLokasiAttribute($value)
     {
         return ucfirst($value);
+    }
+
+    public function sellers()
+    {
+        return $this->belongsTo(Seller::class, 'seller_id');
     }
 }

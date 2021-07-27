@@ -253,14 +253,20 @@
                                                     @endif
                                                 </div>
                                                 <div class="overlay-layer">
-                                                    <a href="{{route('produk.show', $makanan->id)}}" class="btn font-weight-bolder btn-sm btn-primary mr-2">Quick
+                                                    <a href="{{route('produk.show', $makanan->id)}}"
+                                                       class="btn font-weight-bolder btn-sm btn-primary mr-2">Quick
                                                         View</a>
-                                                    <a href="#" class="btn font-weight-bolder btn-sm btn-light-primary">Purchase</a>
+                                                    <button data-toggle="modal"
+                                                            data-target="#modal-schedule"
+                                                            class="btn font-weight-bolder btn-sm btn-light-primary">
+                                                        Purchase
+                                                    </button>
                                                 </div>
                                             </div>
                                             <div
                                                 class="text-center mt-5 mb-md-0 mb-lg-5 mb-md-0 mb-lg-5 mb-lg-0 mb-5 d-flex flex-column">
-                                                <p class="text-info font-weight-boldest ml-2 mb-0">Rp {{number_format($makanan->harga, 0, ',', '.')}}</p>
+                                                <p class="text-info font-weight-boldest ml-2 mb-0">
+                                                    Rp {{number_format($makanan->harga, 0, ',', '.')}}</p>
                                                 <a href="{{('produk')}}"
                                                    class="font-size-h5 font-weight-bolder text-dark-75 text-hover-primary mb-1">{{$makanan->nama_produk}}</a>
                                             </div>
@@ -308,14 +314,16 @@
                                                     @endif
                                                 </div>
                                                 <div class="overlay-layer">
-                                                    <a href="{{route('produk.show', $minuman->id)}}" class="btn font-weight-bolder btn-sm btn-primary mr-2">Quick
+                                                    <a href="{{route('produk.show', $minuman->id)}}"
+                                                       class="btn font-weight-bolder btn-sm btn-primary mr-2">Quick
                                                         View</a>
                                                     <a href="#" class="btn font-weight-bolder btn-sm btn-light-primary">Purchase</a>
                                                 </div>
                                             </div>
                                             <div
                                                 class="text-center mt-5 mb-md-0 mb-lg-5 mb-md-0 mb-lg-5 mb-lg-0 mb-5 d-flex flex-column">
-                                                <p class="text-info font-weight-boldest ml-2 mb-0">Rp {{number_format($minuman->harga, 0, ',', '.')}}</p>
+                                                <p class="text-info font-weight-boldest ml-2 mb-0">
+                                                    Rp {{number_format($minuman->harga, 0, ',', '.')}}</p>
                                                 <a href="{{('produk')}}"
                                                    class="font-size-h5 font-weight-bolder text-dark-75 text-hover-primary mb-1">{{$minuman->nama_produk}}</a>
                                             </div>
@@ -369,14 +377,16 @@
                                                     @endif
                                                 </div>
                                                 <div class="overlay-layer">
-                                                    <a href="{{route('produk.show', $makanan->id)}}" class="btn font-weight-bolder btn-sm btn-primary mr-2">Quick
+                                                    <a href="{{route('produk.show', $makanan->id)}}"
+                                                       class="btn font-weight-bolder btn-sm btn-primary mr-2">Quick
                                                         View</a>
                                                     <a href="#" class="btn font-weight-bolder btn-sm btn-light-primary">Purchase</a>
                                                 </div>
                                             </div>
                                             <div
                                                 class="text-center mt-5 mb-md-0 mb-lg-5 mb-md-0 mb-lg-5 mb-lg-0 mb-5 d-flex flex-column">
-                                                <p class="text-info font-weight-boldest ml-2 mb-0">Rp {{number_format($makanan->harga, 0, ',', '.')}}</p>
+                                                <p class="text-info font-weight-boldest ml-2 mb-0">
+                                                    Rp {{number_format($makanan->harga, 0, ',', '.')}}</p>
                                                 <a href="{{('produk')}}"
                                                    class="font-size-h5 font-weight-bolder text-dark-75 text-hover-primary mb-1">{{$makanan->nama_produk}}</a>
                                             </div>
@@ -430,14 +440,16 @@
                                                     @endif
                                                 </div>
                                                 <div class="overlay-layer">
-                                                    <a href="{{route('produk.show', $minuman->id)}}" class="btn font-weight-bolder btn-sm btn-primary mr-2">Quick
+                                                    <a href="{{route('produk.show', $minuman->id)}}"
+                                                       class="btn font-weight-bolder btn-sm btn-primary mr-2">Quick
                                                         View</a>
                                                     <a href="#" class="btn font-weight-bolder btn-sm btn-light-primary">Purchase</a>
                                                 </div>
                                             </div>
                                             <div
                                                 class="text-center mt-5 mb-md-0 mb-lg-5 mb-md-0 mb-lg-5 mb-lg-0 mb-5 d-flex flex-column">
-                                                <p class="text-info font-weight-boldest ml-2 mb-0">Rp {{number_format($minuman->harga, 0, ',', '.')}}</p>
+                                                <p class="text-info font-weight-boldest ml-2 mb-0">
+                                                    Rp {{number_format($minuman->harga, 0, ',', '.')}}</p>
                                                 <a href="{{('produk')}}"
                                                    class="font-size-h5 font-weight-bolder text-dark-75 text-hover-primary mb-1">{{$minuman->nama_produk}}</a>
                                             </div>
@@ -467,6 +479,34 @@
         </div>
         <div class="tab-pane" id="forms_widget_tab_4" role="tabpanel">Coming Soon</div>
         <div class="tab-pane" id="forms_widget_tab_5" role="tabpanel">Coming Soon</div>
+    </div>
+    <div class="modal fade" id="modal-schedule">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Pilih Metode Pengiriman</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group row align-content-center">
+                        @foreach($kurir as $mitra)
+                            <div class="symbol symbol-50 symbol-light-white">
+                                <button class="btn btn-secondary ml-4">
+                                    <div class="symbol-label">
+                                        <img src="{{route('kurir.file',$mitra->id)}}"
+                                             class="h-75" alt="">
+                                    </div>
+                                </button>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
     </div>
 @endsection
 

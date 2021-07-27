@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kurir;
 use App\Models\Produk;
 use Illuminate\Http\Request;
 
@@ -14,8 +15,9 @@ class DashboardController extends Controller
      */
     public function index()
     {
+        $kurir = Kurir::all();
         $produk = Produk::with('lapaks')->get();
-        return view('dashboard',compact('produk'));
+        return view('dashboard', compact('produk', 'kurir'));
     }
 
     /**

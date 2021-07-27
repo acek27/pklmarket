@@ -60,7 +60,7 @@
                                 <h5>Deskripsi</h5>
                                 <div class="line-height-xl">{{$data->deskripsi}}</div>
                                 <hr>
-                                <h5>Pengiriman Sendiri</h5>
+                                <h5>Hubungi Pedagang</h5>
                                 <a class="text-success" target="_blank"
                                    href="{{url('https://api.whatsapp.com/send?phone=+62'.$data->lapaks->sellers->whatsapp.'&text=Saya ingin memesan '.$data->nama_produk.' di warung '.$data->lapaks->nama_toko)}}">
                                     +62{{$data->lapaks->sellers->whatsapp}}</a>

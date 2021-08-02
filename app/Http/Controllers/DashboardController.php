@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kategori;
 use App\Models\Kurir;
+use App\Models\Lapak;
 use App\Models\Produk;
 use Illuminate\Http\Request;
 
@@ -15,9 +17,11 @@ class DashboardController extends Controller
      */
     public function index()
     {
+        $kategori = Kategori::all();
         $kurir = Kurir::all();
+        $lapak = Lapak::take(50)->get();
         $produk = Produk::with('lapaks')->get();
-        return view('dashboard', compact('produk', 'kurir'));
+        return view('dashboard', compact('produk', 'kurir', 'kategori', 'lapak'));
     }
 
     /**

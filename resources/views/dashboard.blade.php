@@ -3,511 +3,455 @@
     Home
 @endsection
 
-@section('css')
-
-@endsection
-
 @section('content')
-    <!--begin::Row-->
-    <div class="row">
-        <div class="col-xl-8">
-            <!--begin::Nav Panel Widget 1-->
-            <div class="card card-custom gutter-b card-stretch card-shadowless">
+    <div class="d-flex flex-row">
+        <!--begin::Aside-->
+        <div class="flex-column offcanvas-mobile w-300px w-xl-325px" id="kt_profile_aside">
+            <!--begin::Forms Widget 13-->
+            <div class="card card-custom gutter-b">
+                <div class="card-header border-0 pt-5">
+                    <h3 class="card-title align-items-start flex-column mb-3">
+                        <span class="card-label font-size-h3 font-weight-bolder text-dark">Add New Product</span>
+                        <span
+                            class="text-muted mt-5 font-weight-bolder font-size-lg">Pending Image</span>
+                    </h3>
+                </div>
                 <!--begin::Body-->
-                <div class="card-body p-0">
-                    <!--begin::Nav Tabs-->
-                    <ul class="dashboard-tabs nav nav-pills nav-danger row row-paddingless m-0 p-0 flex-column flex-sm-row"
-                        role="tablist">
-                        <!--begin::Item-->
-                        <li class="nav-item d-flex col-sm flex-grow-1 flex-shrink-0 mr-3 mb-3 mb-lg-0">
-                            <a class="nav-link active border py-10 d-flex flex-grow-1 rounded flex-column align-items-center"
-                               data-toggle="pill" href="#forms_widget_tab_1">
-                            <span class="nav-icon py-2 w-auto">
-                                <span class="svg-icon svg-icon-3x">
-                                    <!--begin::Svg Icon | path:assets/media/svg/icons/Home/Library.svg-->
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                         width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <rect x="0" y="0" width="24" height="24"/>
-                                            <path
-                                                d="M5,3 L6,3 C6.55228475,3 7,3.44771525 7,4 L7,20 C7,20.5522847 6.55228475,21 6,21 L5,21 C4.44771525,21 4,20.5522847 4,20 L4,4 C4,3.44771525 4.44771525,3 5,3 Z M10,3 L11,3 C11.5522847,3 12,3.44771525 12,4 L12,20 C12,20.5522847 11.5522847,21 11,21 L10,21 C9.44771525,21 9,20.5522847 9,20 L9,4 C9,3.44771525 9.44771525,3 10,3 Z"
-                                                fill="#000000"/>
-                                            <rect fill="#000000" opacity="0.3"
-                                                  transform="translate(17.825568, 11.945519) rotate(-19.000000) translate(-17.825568, -11.945519)"
-                                                  x="16.3255682" y="2.94551858" width="3" height="18" rx="1"/>
-                                        </g>
-                                    </svg>
-                                    <!--end::Svg Icon-->
-                                </span>
-                            </span>
-                                <span class="nav-text font-size-lg py-2 font-weight-bold text-center">Home</span>
-                            </a>
-                        </li>
-                        <!--end::Item-->
-                        <!--begin::Item-->
-                        <li class="nav-item d-flex col-sm flex-grow-1 flex-shrink-0 mr-3 mb-3 mb-lg-0">
-                            <a class="nav-link border py-10 d-flex flex-grow-1 rounded flex-column align-items-center"
-                               data-toggle="pill" href="#forms_widget_tab_2">
-                            <span class="nav-icon py-2 w-auto">
-                                <span class="svg-icon svg-icon-3x">
-                                    <!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                         width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <rect x="0" y="0" width="24" height="24"/>
-                                            <rect fill="#000000" x="4" y="4" width="7" height="7" rx="1.5"/>
-                                            <path
-                                                d="M5.5,13 L9.5,13 C10.3284271,13 11,13.6715729 11,14.5 L11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L5.5,20 C4.67157288,20 4,19.3284271 4,18.5 L4,14.5 C4,13.6715729 4.67157288,13 5.5,13 Z M14.5,4 L18.5,4 C19.3284271,4 20,4.67157288 20,5.5 L20,9.5 C20,10.3284271 19.3284271,11 18.5,11 L14.5,11 C13.6715729,11 13,10.3284271 13,9.5 L13,5.5 C13,4.67157288 13.6715729,4 14.5,4 Z M14.5,13 L18.5,13 C19.3284271,13 20,13.6715729 20,14.5 L20,18.5 C20,19.3284271 19.3284271,20 18.5,20 L14.5,20 C13.6715729,20 13,19.3284271 13,18.5 L13,14.5 C13,13.6715729 13.6715729,13 14.5,13 Z"
-                                                fill="#000000" opacity="0.3"/>
-                                        </g>
-                                    </svg>
-                                    <!--end::Svg Icon-->
-                                </span>
-                            </span>
-                                <span class="nav-text font-size-lg py-2 font-weight-bolder text-center">Makanan</span>
-                            </a>
-                        </li>
-                        <!--end::Item-->
-                        <!--begin::Item-->
-                        <li class="nav-item d-flex col-sm flex-grow-1 flex-shrink-0 mr-3 mb-3 mb-lg-0">
-                            <a class="nav-link border py-10 d-flex flex-grow-1 rounded flex-column align-items-center"
-                               data-toggle="pill" href="#forms_widget_tab_3">
-                            <span class="nav-icon py-2 w-auto">
-                                <span class="svg-icon svg-icon-3x">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                         class="bi bi-ui-checks-grid" viewBox="0 0 16 16">
-                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                        <rect x="0" y="0" width="24" height="24"/>
-                                            <path
-                                                d="M13.902.334a.5.5 0 0 1-.28.65l-2.254.902-.4 1.927c.376.095.715.215.972.367.228.135.56.396.56.82 0 .046-.004.09-.011.132l-.962 9.068a1.28 1.28 0 0 1-.524.93c-.488.34-1.494.87-3.01.87-1.516 0-2.522-.53-3.01-.87a1.28 1.28 0 0 1-.524-.93L3.51 5.132A.78.78 0 0 1 3.5 5c0-.424.332-.685.56-.82.262-.154.607-.276.99-.372C5.824 3.614 6.867 3.5 8 3.5c.712 0 1.389.045 1.985.127l.464-2.215a.5.5 0 0 1 .303-.356l2.5-1a.5.5 0 0 1 .65.278zM9.768 4.607A13.991 13.991 0 0 0 8 4.5c-1.076 0-2.033.11-2.707.278A3.284 3.284 0 0 0 4.645 5c.146.073.362.15.648.222C5.967 5.39 6.924 5.5 8 5.5c.571 0 1.109-.03 1.588-.085l.18-.808zm.292 1.756C9.445 6.45 8.742 6.5 8 6.5c-1.133 0-2.176-.114-2.95-.308a5.514 5.514 0 0 1-.435-.127l.838 8.03c.013.121.06.186.102.215.357.249 1.168.69 2.438.69 1.27 0 2.081-.441 2.438-.69.042-.029.09-.094.102-.215l.852-8.03a5.517 5.517 0 0 1-.435.127 8.88 8.88 0 0 1-.89.17zM4.467 4.884s.003.002.005.006l-.005-.006zm7.066 0-.005.006c.002-.004.005-.006.005-.006zM11.354 5a3.174 3.174 0 0 0-.604-.21l-.099.445.055-.013c.286-.072.502-.149.648-.222z"
-                                                fill="#000000"/>
-                                            <path
-                                                d="M13.902.334a.5.5 0 0 1-.28.65l-2.254.902-.4 1.927c.376.095.715.215.972.367.228.135.56.396.56.82 0 .046-.004.09-.011.132l-.962 9.068a1.28 1.28 0 0 1-.524.93c-.488.34-1.494.87-3.01.87-1.516 0-2.522-.53-3.01-.87a1.28 1.28 0 0 1-.524-.93L3.51 5.132A.78.78 0 0 1 3.5 5c0-.424.332-.685.56-.82.262-.154.607-.276.99-.372C5.824 3.614 6.867 3.5 8 3.5c.712 0 1.389.045 1.985.127l.464-2.215a.5.5 0 0 1 .303-.356l2.5-1a.5.5 0 0 1 .65.278zM9.768 4.607A13.991 13.991 0 0 0 8 4.5c-1.076 0-2.033.11-2.707.278A3.284 3.284 0 0 0 4.645 5c.146.073.362.15.648.222C5.967 5.39 6.924 5.5 8 5.5c.571 0 1.109-.03 1.588-.085l.18-.808zm.292 1.756C9.445 6.45 8.742 6.5 8 6.5c-1.133 0-2.176-.114-2.95-.308a5.514 5.514 0 0 1-.435-.127l.838 8.03c.013.121.06.186.102.215.357.249 1.168.69 2.438.69 1.27 0 2.081-.441 2.438-.69.042-.029.09-.094.102-.215l.852-8.03a5.517 5.517 0 0 1-.435.127 8.88 8.88 0 0 1-.89.17zM4.467 4.884s.003.002.005.006l-.005-.006zm7.066 0-.005.006c.002-.004.005-.006.005-.006zM11.354 5a3.174 3.174 0 0 0-.604-.21l-.099.445.055-.013c.286-.072.502-.149.648-.222z"/>
-                                        </g>
-                                    </svg>
-                                </span>
-                            </span>
-                                <span class="nav-text font-size-lg py-2 font-weight-bolder text-center">Minuman</span>
-                            </a>
-                        </li>
-                        <!--end::Item-->
-                        <!--begin::Item-->
-                        <li class="nav-item d-flex col-sm flex-grow-1 flex-shrink-0 mr-3 mb-3 mb-lg-0">
-                            <a class="nav-link border py-10 d-flex flex-grow-1 rounded flex-column align-items-center"
-                               data-toggle="pill" href="#forms_widget_tab_4">
-                            <span class="nav-icon py-2 w-auto">
-                                <span class="svg-icon svg-icon-3x">
-                                    <!--begin::Svg Icon | path:assets/media/svg/icons/Media/Equalizer.svg-->
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                         width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <rect x="0" y="0" width="24" height="24"/>
-                                            <rect fill="#000000" opacity="0.3" x="13" y="4" width="3" height="16"
-                                                  rx="1.5"/>
-                                            <rect fill="#000000" x="8" y="9" width="3" height="11" rx="1.5"/>
-                                            <rect fill="#000000" x="18" y="11" width="3" height="9" rx="1.5"/>
-                                            <rect fill="#000000" x="3" y="13" width="3" height="7" rx="1.5"/>
-                                        </g>
-                                    </svg>
-                                    <!--end::Svg Icon-->
-                                </span>
-                            </span>
-                                <span
-                                    class="nav-text font-size-lg py-2 font-weight-bolder text-center">Coming Soon</span>
-                            </a>
-                        </li>
-                        <!--end::Item-->
-                        <!--begin::Item-->
-                        <li class="nav-item d-flex col-sm flex-grow-1 flex-shrink-0 mr-3 mb-3 mb-lg-0">
-                            <a class="nav-link border py-10 d-flex flex-grow-1 rounded flex-column align-items-center"
-                               data-toggle="pill" href="#forms_widget_tab_5">
-                            <span class="nav-icon py-2 w-auto">
-                                <span class="svg-icon svg-icon-3x">
-                                    <!--begin::Svg Icon | path:assets/media/svg/icons/General/Shield-check.svg-->
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                         width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <rect x="0" y="0" width="24" height="24"/>
-                                            <path
-                                                d="M4,4 L11.6314229,2.5691082 C11.8750185,2.52343403 12.1249815,2.52343403 12.3685771,2.5691082 L20,4 L20,13.2830094 C20,16.2173861 18.4883464,18.9447835 16,20.5 L12.5299989,22.6687507 C12.2057287,22.8714196 11.7942713,22.8714196 11.4700011,22.6687507 L8,20.5 C5.51165358,18.9447835 4,16.2173861 4,13.2830094 L4,4 Z"
-                                                fill="#000000" opacity="0.3"/>
-                                            <path
-                                                d="M11.1750002,14.75 C10.9354169,14.75 10.6958335,14.6541667 10.5041669,14.4625 L8.58750019,12.5458333 C8.20416686,12.1625 8.20416686,11.5875 8.58750019,11.2041667 C8.97083352,10.8208333 9.59375019,10.8208333 9.92916686,11.2041667 L11.1750002,12.45 L14.3375002,9.2875 C14.7208335,8.90416667 15.2958335,8.90416667 15.6791669,9.2875 C16.0625002,9.67083333 16.0625002,10.2458333 15.6791669,10.6291667 L11.8458335,14.4625 C11.6541669,14.6541667 11.4145835,14.75 11.1750002,14.75 Z"
-                                                fill="#000000"/>
-                                        </g>
-                                    </svg>
-                                    <!--end::Svg Icon-->
-                                </span>
-                            </span>
-                                <span
-                                    class="nav-text font-size-lg py-2 font-weight-bolder text-center">Coming Soon</span>
-                            </a>
-                        </li>
-                        <!--end::Item-->
-                        <!--begin::Item-->
-                        <li class="nav-item d-flex col-sm flex-grow-1 flex-shrink-0 mr-3 mb-3 mb-lg-0">
-                            <a class="nav-link border py-10 d-flex flex-grow-1 rounded flex-column align-items-center"
-                               data-toggle="pill" href="#tab_forms_widget_6" id="kt_quick_actions_toggle">
-                            <span class="nav-icon py-2 w-auto">
-                                <span class="svg-icon svg-icon-3x">
-                                    <!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
-                                    <!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <rect x="0" y="0" width="24" height="24" />
-                                            <rect fill="#000000" x="4" y="4" width="7" height="7" rx="1.5" />
-                                            <path d="M5.5,13 L9.5,13 C10.3284271,13 11,13.6715729 11,14.5 L11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L5.5,20 C4.67157288,20 4,19.3284271 4,18.5 L4,14.5 C4,13.6715729 4.67157288,13 5.5,13 Z M14.5,4 L18.5,4 C19.3284271,4 20,4.67157288 20,5.5 L20,9.5 C20,10.3284271 19.3284271,11 18.5,11 L14.5,11 C13.6715729,11 13,10.3284271 13,9.5 L13,5.5 C13,4.67157288 13.6715729,4 14.5,4 Z M14.5,13 L18.5,13 C19.3284271,13 20,13.6715729 20,14.5 L20,18.5 C20,19.3284271 19.3284271,20 18.5,20 L14.5,20 C13.6715729,20 13,19.3284271 13,18.5 L13,14.5 C13,13.6715729 13.6715729,13 14.5,13 Z" fill="#000000" opacity="0.3" />
-                                        </g>
-                                    </svg> -->
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                         class="bi bi-ui-checks-grid" viewBox="0 0 16 16">
-                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                        <rect x="0" y="0" width="24" height="24"/>
-                                            <path
-                                                d="M2 10h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1zm9-9h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zm0 9a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-3zm0-10a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2h-3zM2 9a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H2zm7 2a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2v-3zM0 2a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.354.854a.5.5 0 1 0-.708-.708L3 3.793l-.646-.647a.5.5 0 1 0-.708.708l1 1a.5.5 0 0 0 .708 0l2-2z"
-                                                fill="#000000"/>
-                                        <path
-                                            d="M2 10h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1zm9-9h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zm0 9a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-3zm0-10a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2h-3zM2 9a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H2zm7 2a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2v-3zM0 2a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.354.854a.5.5 0 1 0-.708-.708L3 3.793l-.646-.647a.5.5 0 1 0-.708.708l1 1a.5.5 0 0 0 .708 0l2-2z"/>
-                                        </g>
-                                    </svg>
-                                    <!--end::Svg Icon-->
-                                </span>
-                            </span>
-                                <span
-                                    class="nav-text font-size-lg py-2 font-weight-bolder text-center">Semua Kategori</span>
-                            </a>
-                        </li>
-                        <!--end::Item-->
-
-                    </ul>
-                    <!--end::Nav Tabs-->
+                <div class="card-body pt-4">
+                    <!--begin::Form-->
+                    <form>
+                        <!--begin::Product images-->
+                        <div class="d-flex mb-8 justify-content-between">
+                            <!--begin::Symbol-->
+                            <div class="symbol symbol-70 flex-shrink-0 mr-4 bg-light">
+                                <div class="symbol-label"
+                                     style="background-image: url('assets/media/products/11.png')"></div>
+                            </div>
+                            <!--end::Symbol-->
+                            <!--begin::Symbol-->
+                            <div class="symbol symbol-70 flex-shrink-0 mr-4">
+                                <div class="symbol-label"
+                                     style="background-image: url('assets/media/products/12.png')"></div>
+                            </div>
+                            <!--end::Symbol-->
+                            <!--begin::Symbol-->
+                            <div class="symbol symbol-70 flex-shrink-0">
+                                <a href="#"
+                                   class="h-70px w-70px btn btn-light-primary d-flex flex-column flex-center font-weight-bolder p-0">
+															<span class="svg-icon svg-icon-lg m-0">
+																<!--begin::Svg Icon | path:assets/media/svg/icons/Design/Image.svg-->
+																<svg xmlns="http://www.w3.org/2000/svg"
+                                                                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                     width="24px" height="24px" viewBox="0 0 24 24"
+                                                                     version="1.1">
+																	<g stroke="none" stroke-width="1" fill="none"
+                                                                       fill-rule="evenodd">
+																		<polygon points="0 0 24 0 24 24 0 24"/>
+																		<path
+                                                                            d="M6,5 L18,5 C19.6568542,5 21,6.34314575 21,8 L21,17 C21,18.6568542 19.6568542,20 18,20 L6,20 C4.34314575,20 3,18.6568542 3,17 L3,8 C3,6.34314575 4.34314575,5 6,5 Z M5,17 L14,17 L9.5,11 L5,17 Z M16,14 C17.6568542,14 19,12.6568542 19,11 C19,9.34314575 17.6568542,8 16,8 C14.3431458,8 13,9.34314575 13,11 C13,12.6568542 14.3431458,14 16,14 Z"
+                                                                            fill="#000000"/>
+																	</g>
+																</svg>
+                                                                <!--end::Svg Icon-->
+															</span>Upload</a>
+                            </div>
+                            <!--end::Symbol-->
+                        </div>
+                        <!--end::Product images-->
+                        <!--begin::Product info-->
+                        <div class="mt-6">
+                            <div class="text-muted mb-4 font-weight-bolder font-size-lg">Product
+                                Info
+                            </div>
+                            <!--begin::Input-->
+                            <div class="form-group mb-8">
+                                <label class="font-weight-bolder">Name</label>
+                                <input type="text"
+                                       class="form-control form-control-solid form-control-lg"
+                                       placeholder=""/>
+                            </div>
+                            <div class="form-group mb-8">
+                                <label class="font-weight-bolder">Category</label>
+                                <select class="form-control form-control-solid form-control-lg">
+                                    <option></option>
+                                    <option>Mens</option>
+                                    <option>Womens</option>
+                                    <option>Accessories</option>
+                                    <option>Technology</option>
+                                    <option>Appliances</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-8">
+                                <label class="font-weight-bolder">Size</label>
+                                <select class="form-control form-control-solid form-control-lg">
+                                    <option></option>
+                                    <option>XS</option>
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option>L</option>
+                                    <option>XL</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-8">
+                                <label for="exampleTextarea"
+                                       class="font-weight-bolder">Description</label>
+                                <textarea class="form-control form-control-solid form-control-lg"
+                                          rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="font-weight-bolder">Price (Euro)</label>
+                                <input type="text"
+                                       class="form-control form-control-solid form-control-lg"
+                                       placeholder=""/>
+                            </div>
+                            <!--begin::Color-->
+                            <div class="form-group">
+                                <label class="font-weight-bolder">Color</label>
+                                <div class="radio-inline mb-11">
+                                    <label class="radio radio-accent radio-danger mr-0">
+                                        <input type="radio" name="color-selector"
+                                               checked="checked"/>
+                                        <span></span>
+                                    </label>
+                                    <label class="radio radio-accent radio-primary mr-0">
+                                        <input type="radio" name="color-selector"/>
+                                        <span></span>
+                                    </label>
+                                    <label class="radio radio-accent radio-success mr-0">
+                                        <input type="radio" name="color-selector"/>
+                                        <span></span>
+                                    </label>
+                                    <label class="radio radio-accent radio-info mr-0">
+                                        <input type="radio" name="color-selector"/>
+                                        <span></span>
+                                    </label>
+                                    <label class="radio radio-accent radio-dark mr-0">
+                                        <input type="radio" name="color-selector"/>
+                                        <span></span>
+                                    </label>
+                                    <label class="radio radio-accent radio-secondary mr-0">
+                                        <input type="radio" name="color-selector"/>
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <!--end::Color-->
+                            <button type="submit"
+                                    class="btn btn-primary font-weight-bolder mr-2 px-8">Save
+                            </button>
+                            <button type="reset"
+                                    class="btn btn-clear font-weight-bolder text-muted px-8">Discard
+                            </button>
+                            <!--end::Input-->
+                        </div>
+                        <!--end::Product info-->
+                    </form>
+                    <!--end::Form-->
                 </div>
                 <!--end::Body-->
             </div>
-            <!--begin::Nav Panel Widget 1-->
-        </div>
-        <div class="col-xl-4">
-            <!--begin::Engage Widget 8-->
-            <div class="card card-custom gutter-b card-stretch card-shadowless">
-                <div class="card-body p-0 d-flex">
-                    <div
-                        class="d-flex align-items-start justify-content-start flex-grow-1 bg-light-warning p-8 card-rounded flex-grow-1 position-relative">
-                        <div class="d-flex flex-column align-items-start flex-grow-1 h-100">
-                            <div class="p-1 flex-grow-1">
-                                <h4 class="text-warning font-weight-bolder">PROMO HARINI...!!!</h4>
-                                <p class="text-dark-50 font-weight-bold mt-3">Dapatkan Potongan Harga</p>
+            <!--end::Forms Widget 13-->
+            <!--begin::List Widget 21-->
+            <div class="card card-custom gutter-b">
+                <!--begin::Header-->
+                <div class="card-header border-0 pt-5">
+                    <h3 class="card-title align-items-start flex-column mb-5">
+                                            <span
+                                                class="card-label font-weight-bolder text-dark mb-1">Recent Products</span>
+                        <span
+                            class="text-muted mt-2 font-weight-bold font-size-sm">New Arrivals</span>
+                    </h3>
+                    <div class="card-toolbar">
+                        <div class="dropdown dropdown-inline">
+                            <a href="#" class="btn btn-clean btn-sm btn-icon" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">
+                                <i class="ki ki-bold-more-hor"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-md dropdown-menu-right">
+                                <!--begin::Navigation-->
+                                <ul class="navi navi-hover">
+                                    <li class="navi-header font-weight-bold py-4">
+                                        <span class="font-size-lg">Choose Label:</span>
+                                        <i class="flaticon2-information icon-md text-muted"
+                                           data-toggle="tooltip" data-placement="right"
+                                           title="Click to learn more..."></i>
+                                    </li>
+                                    <li class="navi-separator mb-3 opacity-70"></li>
+                                    <li class="navi-item">
+                                        <a href="#" class="navi-link">
+																		<span class="navi-text">
+																			<span
+                                                                                class="label label-xl label-inline label-light-success">Customer</span>
+																		</span>
+                                        </a>
+                                    </li>
+                                    <li class="navi-item">
+                                        <a href="#" class="navi-link">
+																		<span class="navi-text">
+																			<span
+                                                                                class="label label-xl label-inline label-light-danger">Partner</span>
+																		</span>
+                                        </a>
+                                    </li>
+                                    <li class="navi-item">
+                                        <a href="#" class="navi-link">
+																		<span class="navi-text">
+																			<span
+                                                                                class="label label-xl label-inline label-light-warning">Suplier</span>
+																		</span>
+                                        </a>
+                                    </li>
+                                    <li class="navi-item">
+                                        <a href="#" class="navi-link">
+																		<span class="navi-text">
+																			<span
+                                                                                class="label label-xl label-inline label-light-primary">Member</span>
+																		</span>
+                                        </a>
+                                    </li>
+                                    <li class="navi-item">
+                                        <a href="#" class="navi-link">
+																		<span class="navi-text">
+																			<span
+                                                                                class="label label-xl label-inline label-light-dark">Staff</span>
+																		</span>
+                                        </a>
+                                    </li>
+                                    <li class="navi-separator mt-3 opacity-70"></li>
+                                    <li class="navi-footer py-4">
+                                        <a class="btn btn-clean font-weight-bold btn-sm" href="#">
+                                            <i class="ki ki-plus icon-sm"></i>Add new</a>
+                                    </li>
+                                </ul>
+                                <!--end::Navigation-->
                             </div>
-                            <a href='#' class="btn btn-link btn-link-warning font-weight-bold">Lihat Semua Promo
-                                <span class="svg-icon svg-icon-lg svg-icon-warning">
-                            <!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <polygon points="0 0 24 0 24 24 0 24"/>
-                                    <rect fill="#000000" opacity="0.3"
-                                          transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)"
-                                          x="11" y="5" width="2" height="14" rx="1"/>
-                                    <path
-                                        d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z"
-                                        fill="#000000" fill-rule="nonzero"
-                                        transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)"/>
-                                </g>
-                            </svg>
-                                    <!--end::Svg Icon-->
-                        </span></a>
-                        </div>
-                        <div class="position-absolute right-0 bottom-0 mr-5 overflow-hidden">
-                            <img src="{{asset('assets/media/svg/humans/custom-13.svg')}}"
-                                 class="max-h-200px max-h-xl-275px mb-n20" alt=""/>
                         </div>
                     </div>
                 </div>
+                <!--end::Header-->
+                <!--begin::Body-->
+                <div class="card-body pt-2">
+                    <!--begin::Item-->
+                    <div class="d-flex mb-8">
+                        <!--begin::Symbol-->
+                        <div class="symbol symbol-50 symbol-2by3 flex-shrink-0 mr-4">
+                            <div class="d-flex flex-column">
+                                <div class="symbol-label mb-3"
+                                     style="background-image: url('assets/media/stock-600x400/img-23.jpg')"></div>
+                                <a href="#"
+                                   class="btn btn-light-primary font-weight-bolder py-2 font-size-sm">Edit</a>
+                            </div>
+                        </div>
+                        <!--end::Symbol-->
+                        <!--begin::Title-->
+                        <div class="d-flex flex-column flex-grow-1 my-lg-0 my-2 pr-3">
+                            <a href="#"
+                               class="text-dark-75 font-weight-bolder text-hover-primary font-size-lg mb-2">Darius
+                                the Great</a>
+                            <span class="text-muted font-weight-bold font-size-sm mb-3">All it takes tank credibility is one glaring error</span>
+                            <span class="text-muted font-weight-bold font-size-lg">Price:
+														<span
+                                                            class="text-dark-75 font-weight-bolder">99.00$</span></span>
+                        </div>
+                        <!--end::Title-->
+                    </div>
+                    <!--end::Item-->
+                    <!--begin::Item-->
+                    <div class="d-flex">
+                        <!--begin::Symbol-->
+                        <div class="symbol symbol-50 symbol-2by3 flex-shrink-0 mr-4">
+                            <div class="d-flex flex-column">
+                                <div class="symbol-label mb-3"
+                                     style="background-image: url('assets/media/stock-600x400/img-25.jpg')"></div>
+                                <a href="#"
+                                   class="btn btn-light-primary font-weight-bolder py-2 font-size-sm">Edit</a>
+                            </div>
+                        </div>
+                        <!--end::Symbol-->
+                        <!--begin::Title-->
+                        <div class="d-flex flex-column flex-grow-1 my-lg-0 my-2 pr-3">
+                            <a href="#"
+                               class="text-dark-75 font-weight-bolder text-hover-primary font-size-lg mb-2">Nike
+                                Airmax</a>
+                            <span class="text-muted font-weight-bold font-size-sm mb-3">All it takes tank credibility is one glaring error</span>
+                            <span class="text-muted font-weight-bold font-size-lg">Price:
+														<span
+                                                            class="text-dark-75 font-weight-bolder">99.00$</span></span>
+                        </div>
+                        <!--end::Title-->
+                    </div>
+                    <!--end::Item-->
+                </div>
+                <!--end::Body-->
             </div>
-            <!--end::Engage Widget 8-->
+            <!--end::List Widget 21-->
         </div>
-    </div>
-    <!--end::Row-->
-
-    <div class="tab-content m-0 p-0">
-        <div class="tab-pane active" id="forms_widget_tab_1" role="tabpanel">
+        <!--end::Aside-->
+        <!--begin::Layout-->
+        <div class="flex-row-fluid ml-lg-8">
+            <!--begin::Card-->
             <div class="card card-custom card-stretch gutter-b">
                 <div class="card-body">
-                    <div class="mb-11">
-                        <div class="d-flex justify-content-between align-items-center mb-7">
-                            <h2 class="font-weight-bolder text-dark font-size-h3 mb-0">Makanan</h2>
-                            <a href="{{route('view.all', 1)}}" class="btn btn-light-primary btn-sm font-weight-bolder">View
-                                All</a>
-                        </div>
-                        <div class="row">
-                            @foreach(count($produk->where('kategori_id', 1)) > 2 ? $produk->where('kategori_id', 1)->random(3) : $produk->where('kategori_id', 1) as $makanan)
-                                <div class="col-md-4 col-lg-3 col-xxl-4">
-                                    <div class="card card-custom card-shadowless">
-                                        <div class="card-body p-0">
-                                            <div class="overlay">
-                                                <div class="overlay-wrapper rounded bg-light text-center">
-                                                    @if(is_null($makanan->foto_produk))
-                                                        <img src="{{asset('assets/media/products/16.png')}}" alt=""
-                                                             class="mw-100 w-200px">
-                                                    @else
-                                                        <img src="{{route('produk.file',$makanan->id)}}" alt=""
-                                                             class="mw-100 w-200px">
-                                                    @endif
-                                                </div>
-                                                <div class="overlay-layer">
-                                                    <a href="{{route('produk.show', $makanan->id)}}"
-                                                       class="btn font-weight-bolder btn-sm btn-primary mr-2">Quick
-                                                        View</a>
-                                                    <button data-toggle="modal"
-                                                            data-target="#modal-schedule"
-                                                            class="btn font-weight-bolder btn-sm btn-light-primary">
-                                                        Purchase
-                                                    </button>
-                                                </div>
-                                            </div>
+                    <!--begin::Engage Widget 15-->
+                    <div class="card card-custom mb-12">
+                        <div class="card-body rounded p-0 d-flex" style="background-color:#DAF0FD;">
+                            <div
+                                class="d-flex flex-column flex-lg-row-auto w-auto w-lg-350px w-xl-450px w-xxl-500px p-10 p-md-20">
+                                <h1 class="font-weight-bolder text-dark">Cari disini..</h1>
+                                <div class="font-size-h4 mb-8">Lebih mudah dan cepat</div>
+                                <div
+                                    class="d-flex align-items-md-center mb-2 flex-column flex-md-row">
+                                    <div
+                                        class="bg-white rounded p-4 d-flex flex-grow-1 flex-sm-grow-0">
+                                        <!--begin::Form-->
+                                        <form
+                                            class="form d-flex align-items-md-center flex-sm-row flex-column flex-grow-1 flex-sm-grow-0">
+                                            <!--begin::Input-->
                                             <div
-                                                class="text-center mt-5 mb-md-0 mb-lg-5 mb-md-0 mb-lg-5 mb-lg-0 mb-5 d-flex flex-column">
-                                                <p class="text-info font-weight-boldest ml-2 mb-0">
-                                                    Rp {{number_format($makanan->harga, 0, ',', '.')}}</p>
-                                                <a href="{{('produk')}}"
-                                                   class="font-size-h5 font-weight-bolder text-dark-75 text-hover-primary mb-1">{{$makanan->nama_produk}}</a>
+                                                class="d-flex align-items-center py-3 py-sm-0 px-sm-3">
+												<span class="svg-icon svg-icon-lg">
+													<!--begin::Svg Icon | path:/metronic/theme/html/demo4/dist/assets/media/svg/icons/General/Search.svg-->
+													<svg xmlns="http://www.w3.org/2000/svg"
+                                                         xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                                                         height="24px" viewBox="0 0 24 24" version="1.1">
+														<g stroke="none" stroke-width="1" fill="none"
+                                                           fill-rule="evenodd">
+															<rect x="0" y="0" width="24" height="24"></rect>
+															<path
+                                                                d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z"
+                                                                fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
+															<path
+                                                                d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z"
+                                                                fill="#000000" fill-rule="nonzero"></path>
+														</g>
+													</svg>
+                                                    <!--end::Svg Icon-->
+												</span>
+                                                <input type="text"
+                                                       class="form-control border-0 font-weight-bold pl-2"
+                                                       placeholder="Produk">
                                             </div>
-                                            <div class="d-flex align-items-center">
-                                                <div class="symbol symbol-50 symbol-light-white">
-                                                    <div class="symbol-label">
-                                                        <img src="{{route('lapak.file',$makanan->lapaks->id)}}"
-                                                             class="h-75" alt="">
+                                            <!--end::Input-->
+                                            <!--begin::Input-->
+                                            <span
+                                                class="bullet bullet-ver h-25px d-none d-sm-flex mr-2"></span>
+                                            <div
+                                                class="d-flex align-items-center py-3 py-sm-0 px-sm-3">
+												<span class="svg-icon svg-icon-lg">
+													<!--begin::Svg Icon | path:/metronic/theme/html/demo4/dist/assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
+													<svg xmlns="http://www.w3.org/2000/svg"
+                                                         xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                                                         height="24px" viewBox="0 0 24 24" version="1.1">
+														<g stroke="none" stroke-width="1" fill="none"
+                                                           fill-rule="evenodd">
+															<rect x="0" y="0" width="24" height="24"></rect>
+															<rect fill="#000000" x="4" y="4" width="7" height="7"
+                                                                  rx="1.5"></rect>
+															<path
+                                                                d="M5.5,13 L9.5,13 C10.3284271,13 11,13.6715729 11,14.5 L11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L5.5,20 C4.67157288,20 4,19.3284271 4,18.5 L4,14.5 C4,13.6715729 4.67157288,13 5.5,13 Z M14.5,4 L18.5,4 C19.3284271,4 20,4.67157288 20,5.5 L20,9.5 C20,10.3284271 19.3284271,11 18.5,11 L14.5,11 C13.6715729,11 13,10.3284271 13,9.5 L13,5.5 C13,4.67157288 13.6715729,4 14.5,4 Z M14.5,13 L18.5,13 C19.3284271,13 20,13.6715729 20,14.5 L20,18.5 C20,19.3284271 19.3284271,20 18.5,20 L14.5,20 C13.6715729,20 13,19.3284271 13,18.5 L13,14.5 C13,13.6715729 13.6715729,13 14.5,13 Z"
+                                                                fill="#000000" opacity="0.3"></path>
+														</g>
+													</svg>
+                                                    <!--end::Svg Icon-->
+												</span>
+                                                <input type="text"
+                                                       class="form-control border-0 font-weight-bold pl-2"
+                                                       placeholder="Kategori" data-toggle="dropdown"
+                                                       aria-haspopup="true" aria-expanded="false"
+                                                       data-target="kt_searchbar_7_category-options"
+                                                       data-offset="0,10" readonly="readonly">
+                                                <div id="kt_searchbar_7_category-options"
+                                                     class="dropdown-menu dropdown-menu-sm">
+                                                    <div class="dropdown-item cursor-pointer">HR
+                                                        Management
+                                                    </div>
+                                                    <div class="dropdown-item cursor-pointer">
+                                                        Developers
+                                                    </div>
+                                                    <div class="dropdown-item cursor-pointer">
+                                                        Creative
+                                                    </div>
+                                                    <div class="dropdown-divider"></div>
+                                                    <div class="dropdown-item cursor-pointer">Top
+                                                        Management
                                                     </div>
                                                 </div>
-                                                <div class="d-flex flex-column font-weight-bold">
-                                                    <a href="{{route('lapak.show', $makanan->lapaks->id)}}"
-                                                       class="text-dark text-hover-primary mb-1 font-size-lg">{{$makanan->lapaks->nama_toko}}</a>
-                                                    <span class="text-muted">{{$makanan->lapaks->lokasi}}</span>
-                                                </div>
                                             </div>
-                                            <hr>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
-                    <hr>
+                                            <!--end::Input-->
 
-                    <div class="mb-11">
-                        <div class="d-flex justify-content-between align-items-center mb-7">
-                            <h2 class="font-weight-bolder text-dark font-size-h3 mb-0">Minuman</h2>
-                            <a href="{{route('view.all', 2)}}" class="btn btn-light-primary btn-sm font-weight-bolder">View
-                                All</a>
-                        </div>
-                        <div class="row">
-                            @foreach(count($produk->where('kategori_id', 2)) > 2 ? $produk->where('kategori_id', 1)->random(3) : $produk->where('kategori_id', 2) as $minuman)
-                                <div class="col-md-4 col-lg-3 col-xxl-4">
-                                    <div class="card card-custom card-shadowless">
-                                        <div class="card-body p-0">
-                                            <div class="overlay">
-                                                <div class="overlay-wrapper rounded bg-light text-center">
-                                                    @if(is_null($minuman->foto_produk))
-                                                        <img src="{{asset('assets/media/products/16.png')}}" alt=""
-                                                             class="mw-100 w-200px">
-                                                    @else
-                                                        <img src="{{route('produk.file',$minuman->id)}}" alt=""
-                                                             class="mw-100 w-200px">
-                                                    @endif
-                                                </div>
-                                                <div class="overlay-layer">
-                                                    <a href="{{route('produk.show', $minuman->id)}}"
-                                                       class="btn font-weight-bolder btn-sm btn-primary mr-2">Quick
-                                                        View</a>
-                                                    <a href="#" class="btn font-weight-bolder btn-sm btn-light-primary">Purchase</a>
-                                                </div>
-                                            </div>
-                                            <div
-                                                class="text-center mt-5 mb-md-0 mb-lg-5 mb-md-0 mb-lg-5 mb-lg-0 mb-5 d-flex flex-column">
-                                                <p class="text-info font-weight-boldest ml-2 mb-0">
-                                                    Rp {{number_format($minuman->harga, 0, ',', '.')}}</p>
-                                                <a href="{{('produk')}}"
-                                                   class="font-size-h5 font-weight-bolder text-dark-75 text-hover-primary mb-1">{{$minuman->nama_produk}}</a>
-                                            </div>
-                                            <div class="d-flex align-items-center">
-                                                <div class="symbol symbol-50 symbol-light-white">
-                                                    <div class="symbol-label">
-                                                        <img src="{{route('lapak.file',$minuman->lapaks->id)}}"
-                                                             class="h-75" alt="">
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-column font-weight-bold">
-                                                    <a href="{{route('lapak.show',$minuman->lapaks->id)}}"
-                                                       class="text-dark text-hover-primary mb-1 font-size-lg">{{$minuman->lapaks->nama_toko}}</a>
-                                                    <span class="text-muted">{{$minuman->lapaks->lokasi}}</span>
-                                                </div>
-                                            </div>
-                                            <hr>
-                                        </div>
+                                            <button type="submit"
+                                                    class="btn btn-dark font-weight-bold btn-hover-light-primary mt-3 mt-sm-0 px-7">
+                                                Search
+                                            </button>
+                                        </form>
+                                        <!--end::Form-->
                                     </div>
                                 </div>
-                            @endforeach
+                            </div>
+                            <div
+                                class="d-none d-md-flex flex-row-fluid bgi-no-repeat bgi-position-y-center bgi-position-x-left bgi-size-cover"
+                                style="background-image: url(assets/media/svg/illustrations/progress.svg);"></div>
                         </div>
                     </div>
+                    <!--end::Engage Widget 15-->
+                    @foreach($kategori as $category)
+                        <div class="mb-11">
+                            <!--begin::Heading-->
+                            <div class="d-flex justify-content-between align-items-center mb-7">
+                                <h2 class="font-weight-bolder text-dark font-size-h3 mb-0">{{$category->nama_kategori}}</h2>
+                                <a href="#" class="btn btn-light-primary btn-sm font-weight-bolder">View
+                                    All</a>
+                            </div>
+                            <!--end::Heading-->
+                            <!--begin::Products-->
+                            <div class="row mb-8">
+                            @foreach($produk->where('kategori_id', $category->id) as $product)
+                                <!--begin::Product-->
+                                    <div class="col-md-4 col-xxl-4 col-sm-6 col-6 col-lg-12">
+                                        <!--begin::Card-->
+                                        <div class="card card-custom card-shadowless">
+                                            <div class="card-body p-0">
+                                                <!--begin::Image-->
+                                                <div class="overlay">
+                                                    <div
+                                                        class="overlay-wrapper rounded bg-light text-center">
+                                                        <img
+                                                            src="{{route('produk.file', $product->id)}}"
+                                                            alt=""
+                                                            class="mw-100 w-200px"/>
+                                                    </div>
+                                                    <div class="overlay-layer">
+                                                        <a href="#"
+                                                           class="btn font-weight-bolder btn-sm btn-primary mr-2">Lihat</a>
+                                                        <a href="#"
+                                                           class="btn font-weight-bolder btn-sm btn-light-primary">Beli</a>
+                                                    </div>
+                                                </div>
+                                                <!--end::Image-->
+                                                <!--begin::Details-->
+                                                <div
+                                                    class="text-center mt-5 mb-md-0 mb-lg-5 mb-md-0 mb-lg-5 mb-lg-0 mb-5 d-flex flex-column">
+                                                    <a href="{{route('produk.show',$product->id)}}"
+                                                       class="font-size-h5 font-weight-bolder text-dark-75 text-hover-primary mb-1">{{$product->nama_produk}}</a>
+                                                    <span
+                                                        class="font-size-lg font-weight-bold text-primary">Rp {{number_format($product->harga,0,',','.')}}</span>
+                                                </div>
+                                                <!--end::Details-->
+                                            </div>
+                                        </div>
+                                        <!--end::Card-->
+                                    </div>
+                                    <!--end::Product-->
+                                @endforeach
+                            </div>
+                            <div class="separator separator-solid"></div>
+                        </div>
+                    @endforeach
                 </div>
             </div>
             <!--end::Card-->
         </div>
-        <div class="tab-pane" id="forms_widget_tab_2" role="tabpanel">
-            <div class="card card-custom card-stretch gutter-b">
-                <div class="card-body">
-
-                    <div class="mb-11">
-                        <div class="d-flex justify-content-between align-items-center mb-7">
-                            <h2 class="font-weight-bolder text-dark font-size-h3 mb-0">Makanan</h2>
-                            <a href="{{route('view.all', 1)}}" class="btn btn-light-primary btn-sm font-weight-bolder">View
-                                All</a>
-                        </div>
-                        <div class="row">
-                            @foreach(count($produk->where('kategori_id', 1)) > 2 ? $produk->where('kategori_id', 1)->random(3) : $produk->where('kategori_id', 1) as $makanan)
-                                <div class="col-md-4 col-lg-3 col-xxl-4">
-                                    <div class="card card-custom card-shadowless">
-                                        <div class="card-body p-0">
-                                            <div class="overlay">
-                                                <div class="overlay-wrapper rounded bg-light text-center">
-                                                    @if(is_null($makanan->foto_produk))
-                                                        <img src="{{asset('assets/media/products/16.png')}}" alt=""
-                                                             class="mw-100 w-200px">
-                                                    @else
-                                                        <img src="{{route('produk.file',$makanan->id)}}" alt=""
-                                                             class="mw-100 w-200px">
-                                                    @endif
-                                                </div>
-                                                <div class="overlay-layer">
-                                                    <a href="{{route('produk.show', $makanan->id)}}"
-                                                       class="btn font-weight-bolder btn-sm btn-primary mr-2">Quick
-                                                        View</a>
-                                                    <a href="#" class="btn font-weight-bolder btn-sm btn-light-primary">Purchase</a>
-                                                </div>
-                                            </div>
-                                            <div
-                                                class="text-center mt-5 mb-md-0 mb-lg-5 mb-md-0 mb-lg-5 mb-lg-0 mb-5 d-flex flex-column">
-                                                <p class="text-info font-weight-boldest ml-2 mb-0">
-                                                    Rp {{number_format($makanan->harga, 0, ',', '.')}}</p>
-                                                <a href="{{('produk')}}"
-                                                   class="font-size-h5 font-weight-bolder text-dark-75 text-hover-primary mb-1">{{$makanan->nama_produk}}</a>
-                                            </div>
-                                            <div class="d-flex align-items-center">
-                                                <div class="symbol symbol-50 symbol-light-white">
-                                                    <div class="symbol-label">
-                                                        <img src="{{route('lapak.file',$makanan->lapaks->id)}}"
-                                                             class="h-75" alt="">
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-column font-weight-bold">
-                                                    <a href="{{route('lapak.show', $makanan->lapaks->id)}}"
-                                                       class="text-dark text-hover-primary mb-1 font-size-lg">{{$makanan->lapaks->nama_toko}}</a>
-                                                    <span class="text-muted">{{$makanan->lapaks->lokasi}}</span>
-                                                </div>
-                                            </div>
-                                            <hr>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="tab-pane" id="forms_widget_tab_3" role="tabpanel">
-            <div class="card card-custom card-stretch gutter-b">
-                <div class="card-body">
-
-                    <div class="mb-11">
-                        <div class="d-flex justify-content-between align-items-center mb-7">
-                            <h2 class="font-weight-bolder text-dark font-size-h3 mb-0">Minuman</h2>
-                            <a href="{{route('view.all', 2)}}" class="btn btn-light-primary btn-sm font-weight-bolder">View
-                                All</a>
-                        </div>
-                        <div class="row">
-                            @foreach(count($produk->where('kategori_id', 2)) > 2 ? $produk->where('kategori_id', 1)->random(3) : $produk->where('kategori_id', 2) as $minuman)
-                                <div class="col-md-4 col-lg-3 col-xxl-4">
-                                    <div class="card card-custom card-shadowless">
-                                        <div class="card-body p-0">
-                                            <div class="overlay">
-                                                <div class="overlay-wrapper rounded bg-light text-center">
-                                                    @if(is_null($minuman->foto_produk))
-                                                        <img src="{{asset('assets/media/products/16.png')}}" alt=""
-                                                             class="mw-100 w-200px">
-                                                    @else
-                                                        <img src="{{route('produk.file',$minuman->id)}}" alt=""
-                                                             class="mw-100 w-200px">
-                                                    @endif
-                                                </div>
-                                                <div class="overlay-layer">
-                                                    <a href="{{route('produk.show', $minuman->id)}}"
-                                                       class="btn font-weight-bolder btn-sm btn-primary mr-2">Quick
-                                                        View</a>
-                                                    <a href="#" class="btn font-weight-bolder btn-sm btn-light-primary">Purchase</a>
-                                                </div>
-                                            </div>
-                                            <div
-                                                class="text-center mt-5 mb-md-0 mb-lg-5 mb-md-0 mb-lg-5 mb-lg-0 mb-5 d-flex flex-column">
-                                                <p class="text-info font-weight-boldest ml-2 mb-0">
-                                                    Rp {{number_format($minuman->harga, 0, ',', '.')}}</p>
-                                                <a href="{{('produk')}}"
-                                                   class="font-size-h5 font-weight-bolder text-dark-75 text-hover-primary mb-1">{{$minuman->nama_produk}}</a>
-                                            </div>
-                                            <div class="d-flex align-items-center">
-                                                <div class="symbol symbol-50 symbol-light-white">
-                                                    <div class="symbol-label">
-                                                        <img src="{{route('lapak.file',$minuman->lapaks->id)}}"
-                                                             class="h-75" alt="">
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-column font-weight-bold">
-                                                    <a href="{{route('lapak.show', $minuman->lapaks->id)}}"
-                                                       class="text-dark text-hover-primary mb-1 font-size-lg">{{$minuman->lapaks->nama_toko}}</a>
-                                                    <span class="text-muted">{{$minuman->lapaks->lokasi}}</span>
-                                                </div>
-                                            </div>
-                                            <hr>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="tab-pane" id="forms_widget_tab_4" role="tabpanel">Coming Soon</div>
-        <div class="tab-pane" id="forms_widget_tab_5" role="tabpanel">Coming Soon</div>
-    </div>
-    <div class="modal fade" id="modal-schedule">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Pilih Metode Pengiriman</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group row align-content-center">
-                        @foreach($kurir as $mitra)
-                            <div class="symbol symbol-50 symbol-light-white">
-                                <button class="btn btn-secondary ml-4">
-                                    <div class="symbol-label">
-                                        <img src="{{route('kurir.file',$mitra->id)}}"
-                                             class="h-75" alt="">
-                                    </div>
-                                </button>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-            <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
+        <!--end::Layout-->
     </div>
 @endsection
-
 

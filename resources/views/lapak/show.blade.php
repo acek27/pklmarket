@@ -45,6 +45,7 @@
                                     class="d-none d-md-flex flex-row-fluid bgi-no-repeat bgi-position-y-center bgi-position-x-left bgi-size-cover"
                                     style="background-image: {{route('lapak.file',$data->id)}}">
                                 </div>
+                                <div class="d-none d-md-flex flex-row-fluid bgi-no-repeat bgi-position-y-center bgi-position-x-left bgi-size-cover" style="background-image: url(assets/media/svg/illustrations/progress.svg);"></div>
                             </div>
                         </div>
                     </div>
@@ -62,7 +63,7 @@
                         </div>
                         <div class="row">
                             @foreach($produk as $value)
-                                <div class="col-md-4 col-lg-3 col-xxl-4">
+                                <div class="col-md-4 col-lg-3 col-6 col-sm-6 col-xxl-4">
                                     <div class="card card-custom card-shadowless">
                                         <div class="card-body p-0">
                                             <div class="overlay">
@@ -138,7 +139,7 @@
                     </div>
                     <div class="form-group">
                         {{Form::label('kategori_id', 'Kategori', ['class' => 'awesome'])}}
-                        {{ Form::select('kategori_id', $kategori,null,[
+                        {{ Form::select('kategori_id', $option,null,[
                               'class'=>'form-control select2',
                               'id' => 'kategori_id',
                               'placeholder' => '-- Pilih kategori --',

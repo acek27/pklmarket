@@ -28,9 +28,11 @@ class ProdukController extends Controller
 
     public function viewall($id)
     {
-        $key = $id;
-        $data = Produk::with('lapaks')->where('kategori_id', $id)->get();
-        return view('view-all', compact('data', 'key'));
+        $kategori = Kategori::all();
+        $key = Kategori::findOrFail($id);
+        $lapak = Lapak::all();
+        $produk = Produk::with('lapaks')->get();
+        return view('view-all', compact('produk', 'kategori', 'lapak', 'key'));
     }
 
     /**
@@ -86,8 +88,11 @@ class ProdukController extends Controller
     public function show($id)
     {
         $kurir = Kurir::all();
+        $kategori = Kategori::all();
+        $produk= Produk::all();
+        $lapak = Lapak::all();
         $data = Produk::with('lapaks')->findOrFail($id);
-        return view('produk.show', compact('data', 'kurir'));
+        return view('produk.show', compact('data', 'kurir','lapak','produk','kategori'));
     }
 
     /**

@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Produk extends Model
 {
     protected $guarded = [];
+    protected $with = ['kategoris'];
 
     public static $rulesCreate = [
         'nama_produk' => 'required',
@@ -29,5 +30,9 @@ class Produk extends Model
     public function lapaks()
     {
         return $this->belongsTo(Lapak::class, 'lapak_id');
+    }
+    public function kategoris()
+    {
+        return $this->belongsTo(Kategori::class, 'kategori_id');
     }
 }

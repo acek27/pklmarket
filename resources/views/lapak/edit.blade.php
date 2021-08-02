@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.layout-master')
 @section('content')
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -10,7 +10,7 @@
         </div>
     @endif
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-12">
             {!! Form::model($data, ['url'=>route('lapak.update',$data->id), 'files' => true, 'method'=>'put']) !!}
             <div class="form-group">
                 {{Form::label('nama_toko', 'Nama Toko', ['class' => 'awesome'])}}

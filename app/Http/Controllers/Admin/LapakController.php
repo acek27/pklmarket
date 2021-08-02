@@ -80,8 +80,10 @@ class LapakController extends Controller
     {
         $data = Lapak::findOrFail($id);
         $produk = Produk::where('lapak_id', $data->id)->get();
-        $kategori = Kategori::all()->pluck('nama_kategori', 'id');
-        return view('lapak.show', compact('data', 'kategori', 'produk'));
+        $option = Kategori::all()->pluck('nama_kategori', 'id');
+        $lapak = Lapak::all();
+        $kategori= Kategori::all();
+        return view('lapak.show', compact('data', 'kategori', 'produk', 'option','lapak'));
     }
 
     /**

@@ -85,7 +85,7 @@
                                             <div
                                                 class="text-center mt-5 mb-md-0 mb-lg-5 mb-md-0 mb-lg-5 mb-lg-0 mb-5 d-flex flex-column">
                                                 <p class="text-info font-weight-boldest ml-2 mb-0">Rp {{number_format($value->harga, 0, ',', '.')}}</p>
-                                                <a href="{{url('produk')}}"
+                                                <a href="{{route('produk.show',$value->id)}}"
                                                    class="font-size-h5 font-weight-bolder text-dark-75 text-hover-primary mb-1">{{$value->nama_produk}}</a>
                                             </div>
                                         </div>

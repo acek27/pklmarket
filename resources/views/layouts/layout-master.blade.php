@@ -46,7 +46,7 @@ License: You must have a valid license purchased only from themeforest(the above
             <!--begin::Header Mobile-->
             <div id="kt_header_mobile" class="header-mobile">
                 <!--begin::Logo-->
-                <a href="index.html">
+                <a href="{{url('/')}}">
                     <img alt="Logo" src="assets/media/logos/logo-default.png" class="max-h-30px"/>
                 </a>
                 <!--end::Logo-->
@@ -3981,7 +3981,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <div class="navi navi-icon-circle navi-spacer-x-0">
                     <!--begin::Item-->
                     @foreach($lapak as $item)
-                        <a href="#" class="navi-item">
+                        <a href="{{route('lapak.show',$item->id)}}" class="navi-item">
                             <div class="navi-link rounded">
                                 <div class="symbol symbol-50 mr-3">
                                     <div class="symbol-label">

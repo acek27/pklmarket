@@ -330,7 +330,7 @@
 												</span>
                                                 <input type="text" name="nama_produk"
                                                        class="form-control border-0 font-weight-bold pl-2"
-                                                       placeholder="Produk">
+                                                       placeholder="Produk" autofocus>
                                             </div>
                                             <!--end::Input-->
                                             <!--begin::Input-->

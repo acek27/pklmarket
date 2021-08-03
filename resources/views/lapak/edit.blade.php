@@ -9,8 +9,17 @@
             </ul>
         </div>
     @endif
-    <div class="row">
-        <div class="col-lg-12">
+    <div class="card card-custom">
+        <!--begin::Header-->
+        <div class="card-header border-0 py-5">
+            <h3 class="card-title align-items-start flex-column">
+                <span class="card-label font-weight-bolder text-dark">Edit Data Lapak</span>
+            </h3>
+        </div>
+        <!--end::Header-->
+        <!--begin::Body-->
+        <div class="card-body py-0">
+            <!--begin::Table-->
             {!! Form::model($data, ['url'=>route('lapak.update',$data->id), 'files' => true, 'method'=>'put']) !!}
             <div class="form-group">
                 {{Form::label('nama_toko', 'Nama Toko', ['class' => 'awesome'])}}
@@ -42,9 +51,10 @@
                         'id' => 'save'
                     ]) !!}
             </div>
-            {!! Form::close() !!}
+        {!! Form::close() !!}
+        <!--end::Table-->
         </div>
+        <!--end::Body-->
+    </div>
 
-    </div>
-    </div>
 @endsection

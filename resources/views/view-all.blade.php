@@ -40,24 +40,13 @@
                                                 </div>
                                             </div>
                                             <div
-                                                class="text-center mt-5 mb-md-0 mb-lg-5 mb-md-0 mb-lg-5 mb-lg-0 mb-5 d-flex flex-column">
+                                                class="text-center mt-0 mb-md-0 mb-lg-5 mb-md-0 mb-lg-5 mb-lg-0 mb-5 d-flex flex-column">
+                                                <span
+                                                    class="font-size-lg font-weight-bold text-primary">Rp {{number_format($datum->harga,0,',','.')}}</span>
                                                 <a href="{{route('produk.show',$datum->id)}}"
-                                                   class="font-size-h5 font-weight-bolder text-dark-75 text-hover-primary mb-1">{{$datum->nama_produk}}</a>
+                                                   class="font-size-sm font-weight-bolder text-dark-75 text-hover-primary mb-0">{{$datum->nama_produk}}</a>
+                                                <span class="text-muted">{{$datum->lapaks->nama_toko}}</span>
                                             </div>
-                                            <div class="d-flex align-items-center">
-                                                <div class="symbol symbol-50 symbol-light-white">
-                                                    <div class="symbol-label">
-                                                        <img src="{{route('lapak.file',$datum->lapaks->id)}}"
-                                                             class="h-75" alt="">
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex flex-column font-weight-bold">
-                                                    <a href="{{route('lapak.show', $datum->lapak_id)}}"
-                                                       class="text-dark text-hover-primary mb-1 font-size-lg">{{$datum->lapaks->nama_toko}}</a>
-                                                    <span class="text-muted">{{$datum->lapaks->lokasi}}</span>
-                                                </div>
-                                            </div>
-                                            <hr>
                                         </div>
                                     </div>
                                 </div>

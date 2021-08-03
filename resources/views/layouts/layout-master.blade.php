@@ -24,13 +24,13 @@ License: You must have a valid license purchased only from themeforest(the above
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"/>
     <!--end::Fonts-->
     <!--begin::Global Theme Styles(used by all pages)-->
-    <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css"/>
-    <link href="assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css"/>
-    <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('assets/plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('assets/plugins/custom/prismjs/prismjs.bundle.css')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('assets/css/style.bundle.css')}}" rel="stylesheet" type="text/css"/>
     <!--end::Global Theme Styles-->
     <!--begin::Layout Themes(used by all pages)-->
     <!--end::Layout Themes-->
-    <link rel="shortcut icon" href="assets/media/logos/favicon.ico"/>
+    <link rel="shortcut icon" href="{{asset('assets/media/logos/favicon.ico')}}"/>
     @stack('css')
 </head>
 <!--end::Head-->
@@ -47,7 +47,7 @@ License: You must have a valid license purchased only from themeforest(the above
             <div id="kt_header_mobile" class="header-mobile">
                 <!--begin::Logo-->
                 <a href="{{url('/')}}">
-                    <img alt="Logo" src="assets/media/logos/logo-default.png" class="max-h-30px"/>
+                    <img alt="Logo" src="{{asset('assets/media/logos/logo-default.png')}}" class="max-h-30px"/>
                 </a>
                 <!--end::Logo-->
                 <!--begin::Toolbar-->
@@ -67,7 +67,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     <div class="d-none d-lg-flex align-items-center mr-3">
                         <!--begin::Logo-->
                         <a href="{{url('/')}}" class="mr-20">
-                            <img alt="Logo" src="assets/media/logos/logo-default.png" class="logo-default max-h-35px"/>
+                            <img alt="Logo" src="{{asset('assets/media/logos/logo-default.png')}}" class="logo-default max-h-35px"/>
                         </a>
                         <!--end::Logo-->
                     </div>
@@ -4108,9 +4108,9 @@ License: You must have a valid license purchased only from themeforest(the above
     };</script>
 <!--end::Global Config-->
 <!--begin::Global Theme Bundle(used by all pages)-->
-<script src="assets/plugins/global/plugins.bundle.js"></script>
-<script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
-<script src="assets/js/scripts.bundle.js"></script>
+<script src="{{asset('assets/plugins/global/plugins.bundle.js')}}"></script>
+<script src="{{asset('assets/plugins/custom/prismjs/prismjs.bundle.js')}}"></script>
+<script src="{{asset('assets/js/scripts.bundle.js')}}"></script>
 <!--end::Global Theme Bundle-->
 @stack('js')
 </body>

@@ -13,7 +13,7 @@ class ProdukController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('can:admin')->except(['file', 'show', 'viewall']);
+        $this->middleware('can:admin')->except(['file', 'show', 'viewall', 'search']);
     }
 
     /**
@@ -24,6 +24,16 @@ class ProdukController extends Controller
     public function index()
     {
         //
+    }
+
+    public function search(Request $request)
+    {
+        $kategori = Kategori::all();
+        $lapak = Lapak::all();
+        $produk = Produk::with('lapaks')
+            ->where('kategori_id', $request->kategori_id)
+            ->where('nama_produk', 'like', '%' . $request->nama_produk . '%')->get();
+        return view('search', compact('produk', 'kategori', 'lapak'));
     }
 
     public function viewall($id)
@@ -89,10 +99,10 @@ class ProdukController extends Controller
     {
         $kurir = Kurir::all();
         $kategori = Kategori::all();
-        $produk= Produk::all();
+        $produk = Produk::all();
         $lapak = Lapak::all();
         $data = Produk::with('lapaks')->findOrFail($id);
-        return view('produk.show', compact('data', 'kurir','lapak','produk','kategori'));
+        return view('produk.show', compact('data', 'kurir', 'lapak', 'produk', 'kategori'));
     }
 
     /**

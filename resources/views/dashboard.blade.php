@@ -304,8 +304,9 @@
                                     <div
                                         class="bg-white rounded p-4 d-flex flex-grow-1 flex-sm-grow-0">
                                         <!--begin::Form-->
-                                        <form
+                                        <form method="post" action="{{route('produk.search')}}"
                                             class="form d-flex align-items-md-center flex-sm-row flex-column flex-grow-1 flex-sm-grow-0">
+                                            @csrf
                                             <!--begin::Input-->
                                             <div
                                                 class="d-flex align-items-center py-3 py-sm-0 px-sm-3">
@@ -327,7 +328,7 @@
 													</svg>
                                                     <!--end::Svg Icon-->
 												</span>
-                                                <input type="text"
+                                                <input type="text" name="nama_produk"
                                                        class="form-control border-0 font-weight-bold pl-2"
                                                        placeholder="Produk">
                                             </div>
@@ -337,51 +338,19 @@
                                                 class="bullet bullet-ver h-25px d-none d-sm-flex mr-2"></span>
                                             <div
                                                 class="d-flex align-items-center py-3 py-sm-0 px-sm-3">
-												<span class="svg-icon svg-icon-lg">
-													<!--begin::Svg Icon | path:/metronic/theme/html/demo4/dist/assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
-													<svg xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
-                                                         height="24px" viewBox="0 0 24 24" version="1.1">
-														<g stroke="none" stroke-width="1" fill="none"
-                                                           fill-rule="evenodd">
-															<rect x="0" y="0" width="24" height="24"></rect>
-															<rect fill="#000000" x="4" y="4" width="7" height="7"
-                                                                  rx="1.5"></rect>
-															<path
-                                                                d="M5.5,13 L9.5,13 C10.3284271,13 11,13.6715729 11,14.5 L11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L5.5,20 C4.67157288,20 4,19.3284271 4,18.5 L4,14.5 C4,13.6715729 4.67157288,13 5.5,13 Z M14.5,4 L18.5,4 C19.3284271,4 20,4.67157288 20,5.5 L20,9.5 C20,10.3284271 19.3284271,11 18.5,11 L14.5,11 C13.6715729,11 13,10.3284271 13,9.5 L13,5.5 C13,4.67157288 13.6715729,4 14.5,4 Z M14.5,13 L18.5,13 C19.3284271,13 20,13.6715729 20,14.5 L20,18.5 C20,19.3284271 19.3284271,20 18.5,20 L14.5,20 C13.6715729,20 13,19.3284271 13,18.5 L13,14.5 C13,13.6715729 13.6715729,13 14.5,13 Z"
-                                                                fill="#000000" opacity="0.3"></path>
-														</g>
-													</svg>
-                                                    <!--end::Svg Icon-->
-												</span>
-                                                <input type="text"
-                                                       class="form-control border-0 font-weight-bold pl-2"
-                                                       placeholder="Kategori" data-toggle="dropdown"
-                                                       aria-haspopup="true" aria-expanded="false"
-                                                       data-target="kt_searchbar_7_category-options"
-                                                       data-offset="0,10" readonly="readonly">
-                                                <div id="kt_searchbar_7_category-options"
-                                                     class="dropdown-menu dropdown-menu-sm">
-                                                    <div class="dropdown-item cursor-pointer">HR
-                                                        Management
-                                                    </div>
-                                                    <div class="dropdown-item cursor-pointer">
-                                                        Developers
-                                                    </div>
-                                                    <div class="dropdown-item cursor-pointer">
-                                                        Creative
-                                                    </div>
-                                                    <div class="dropdown-divider"></div>
-                                                    <div class="dropdown-item cursor-pointer">Top
-                                                        Management
-                                                    </div>
-                                                </div>
+
+                                                <select class="form-control text-muted" name="kategori_id" required>
+                                                    @foreach($kategori as $option)
+                                                    <option class="text-secondary" value="{{$option->id}}">{{$option->nama_kategori}}</option>
+                                                    @endforeach
+                                                </select>
+
                                             </div>
                                             <!--end::Input-->
 
                                             <button type="submit"
                                                     class="btn btn-dark font-weight-bold btn-hover-light-primary mt-3 mt-sm-0 px-7">
-                                                Search
+                                                Cari
                                             </button>
                                         </form>
                                         <!--end::Form-->

@@ -362,6 +362,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     <div id="kt_header_menu"
                          class="header-menu header-menu-left header-menu-mobile header-menu-layout-default header-menu-root-arrow">
                         <!--begin::Header Nav-->
+                        @can('admin')
                         <ul class="menu-nav">
                             <li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="click"
                                 aria-haspopup="true">
@@ -429,6 +430,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                             </li>
                         </ul>
+                    @endcan
                         <!--end::Header Nav-->
                     </div>
                     <!--end::Header Menu-->
